@@ -1,0 +1,607 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Startup King | Softnovations</title>
+<style>
+:root{color-scheme:dark;--blue:#3028bd;--blue2:#1c167e;--blue3:#101050;--cyan:#18e3f3;--coral:#ff736c;--green:#22a45a;--white:#fff;--pale:#d8d9ff;--muted:#b9b9e8;--ink:#20234a;--paper:#f7f8ff;--line:#e4e6f2;--shadow:0 22px 58px rgba(5,4,56,.32)}
+*{box-sizing:border-box}body{margin:0;min-height:100vh;font-family:"DejaVu Sans",Arial,sans-serif;color:var(--white);background:radial-gradient(ellipse at 78% 3%,#4668ff 0%,transparent 32%),linear-gradient(145deg,#372cff 0%,#2420aa 48%,#100e64 100%)}
+.page{max-width:1180px;margin:0 auto;padding:28px 26px 40px}.topline{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:26px}.brand{display:flex;align-items:center;gap:12px;font-weight:700}.mark{width:34px;height:34px;border-radius:10px;background:linear-gradient(135deg,var(--cyan),#fff);color:var(--blue2);display:grid;place-items:center;font-family:Georgia,serif;font-weight:700}.brand small{display:block;color:var(--pale);font-size:12px;font-weight:400;letter-spacing:.02em;margin-top:3px}.tag{font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--pale)}h1{font:700 32px Georgia,"DejaVu Serif",serif;margin:0 0 8px}.intro{margin-bottom:23px}.intro p{max-width:760px;color:var(--pale);line-height:1.55;margin:0}.layout{display:grid;grid-template-columns:minmax(360px,440px) minmax(300px,1fr);gap:30px;align-items:start}.phone-wrap{display:flex;justify-content:center}.phone{width:390px;max-width:100%;height:790px;border:8px solid #0b0a46;border-radius:38px;background:#0d0c42;box-shadow:var(--shadow);overflow:hidden;display:flex;flex-direction:column}.status{height:28px;flex:0 0 28px;background:#0d0c42;color:#e3e6ff;font-size:11px;padding:7px 18px;display:flex;justify-content:space-between}.appbar{height:58px;flex:0 0 58px;background:linear-gradient(100deg,#2420a3,#3028bd);display:flex;align-items:center;justify-content:space-between;padding:0 18px}.appname{font-weight:700;letter-spacing:.01em}.appname span{color:var(--cyan)}.avatar{height:32px;width:32px;border-radius:50%;background:#e9eaff;color:#222270;font-weight:700;display:grid;place-items:center}.screen{background:var(--paper);color:var(--ink);flex:1;overflow:auto;padding:20px 18px 18px;scrollbar-width:thin}.screen h2{font:700 23px Georgia,"DejaVu Serif",serif;line-height:1.2;margin:0 0 8px;color:#1b1d57}.screen h3{font-size:16px;margin:0 0 6px;color:#20235a}.screen p{font-size:14px;line-height:1.45;margin:0 0 14px;color:#555b7b}.eyebrow{font-size:11px;text-transform:uppercase;letter-spacing:.08em;font-weight:700;color:#5a5dc0;margin:0 0 7px}.field{display:block;font-size:13px;font-weight:600;color:#41466e;margin:0 0 12px}.field input,.field select,.field textarea{display:block;width:100%;min-height:45px;border:1px solid #d9dced;border-radius:11px;background:#fff;padding:10px 12px;margin-top:6px;color:#20234a;font-size:15px}.field textarea{resize:vertical;min-height:78px}.btn{appearance:none;border:0;min-height:44px;border-radius:12px;padding:11px 14px;display:inline-flex;align-items:center;justify-content:center;gap:8px;font-size:13px;font-weight:700;line-height:1.25;text-align:center;text-decoration:none;cursor:pointer;transition:transform .12s ease,filter .12s ease}.btn:hover{filter:brightness(1.04);transform:translateY(-1px)}.btn:focus-visible,.choice:focus-visible,.tab:focus-visible{outline:3px solid #ffb0a9;outline-offset:2px}.btn:disabled{opacity:.48;cursor:not-allowed;transform:none;filter:none}.primary{background:linear-gradient(110deg,#3028bd,#4b43dc);color:#fff;width:100%;box-shadow:0 8px 18px rgba(48,40,189,.16)}.secondary{background:#eceeff;color:#29268d}.ghost{background:transparent;color:#3028bd;border:1px solid #cfd2ef}.coral-btn{background:#fff0ef;color:#a93f3b}.stack{display:grid;gap:10px}.choice{width:100%;border:1px solid #dfe2f3;background:#fff;color:var(--ink);border-radius:14px;padding:13px;text-align:left;cursor:pointer;display:flex;justify-content:space-between;gap:12px;align-items:center;min-height:62px}.choice:hover{border-color:#8d91e9;background:#f2f3ff}.choice strong{display:block;font-size:14px;margin-bottom:4px}.choice small{display:block;color:#6e7391;line-height:1.3;font-size:12px}.chev{color:#4b49bf;font-size:19px;font-weight:700}.banner{border-radius:13px;background:linear-gradient(110deg,#201b8f,#3831c5);color:#fff;padding:12px 13px;margin:14px 0;font-size:12px;line-height:1.35;display:flex;justify-content:space-between;align-items:center;gap:10px}.banner .ad-label{color:#bfc1ff;font-size:10px;text-transform:uppercase;letter-spacing:.08em;font-weight:700}.banner strong{display:block;margin:3px 0 2px;font-size:13px}.banner button{border:1px solid rgba(255,255,255,.5);border-radius:8px;background:transparent;color:#fff;font-size:11px;padding:7px 9px;white-space:nowrap;cursor:pointer}.nav{height:62px;flex:0 0 62px;background:#fff;border-top:1px solid var(--line);display:flex;justify-content:space-around;align-items:center;padding:0 5px}.tab{border:0;background:none;color:#777c9a;min-height:44px;min-width:68px;border-radius:10px;font-size:10px;font-weight:600;cursor:pointer}.tab.active{color:#2f2ab1;background:#f0f0ff}.tab span{display:block;font-size:17px;margin-bottom:2px}.note{font-size:11px!important;color:#777c9a!important;line-height:1.4}.summary{display:grid;grid-template-columns:1fr auto;gap:10px;border-bottom:1px solid var(--line);padding:10px 0}.summary span{font-size:12px;color:#666c8c}.summary strong{font-size:13px;color:#242665;text-align:right}.progress{height:7px;border-radius:99px;background:#e2e5f5;overflow:hidden;margin:9px 0 14px}.progress span{display:block;height:100%;border-radius:99px;background:linear-gradient(90deg,#3028bd,var(--cyan));transition:width .2s ease}.result{border:1px solid #e1e3f1;border-radius:14px;background:#fff;padding:13px;margin:10px 0}.result .price{font:700 15px Georgia,"DejaVu Serif",serif;color:#2d29b3}.result p{font-size:12px;margin:5px 0 0}.chips{display:flex;flex-wrap:wrap;gap:7px;margin:8px 0 13px}.chip{border-radius:999px;background:#edeeff;color:#4140a1;padding:6px 9px;font-size:10px;font-weight:600}.section{margin:16px 0}.section h3{margin-bottom:7px}.bullet{display:flex;gap:9px;align-items:flex-start;margin:8px 0;color:#555b7b;font-size:12px;line-height:1.4}.bullet b{color:#22a251}.step-line{display:flex;gap:10px;margin:9px 0;font-size:12px;line-height:1.35;color:#4e5475}.step-line:before{content:"";width:7px;height:7px;flex:0 0 7px;margin-top:5px;border-radius:50%;background:#20b6c5}.callout{padding:11px 12px;border-radius:12px;background:#f0f2ff;color:#454b73;font-size:12px;line-height:1.4;margin:12px 0}.error{color:#a93f3b;font-size:12px;margin:7px 0;min-height:16px}.toast{position:sticky;bottom:5px;text-align:center;color:#fff;background:#27228f;border-radius:10px;padding:8px 10px;font-size:12px;display:none}.toast.show{display:block}.side{display:grid;gap:16px}.sidebox{padding:19px 20px;border:1px solid rgba(255,255,255,.23);border-radius:18px;background:rgba(14,13,84,.34);backdrop-filter:blur(8px)}.sidebox h2{font:700 21px Georgia,"DejaVu Serif",serif;margin:0 0 9px}.sidebox>p{color:var(--pale);font-size:14px;line-height:1.55;margin:0}.step-label{font-size:12px;text-transform:uppercase;letter-spacing:.08em;color:var(--cyan);font-weight:700;margin-bottom:8px}.explain-list{display:grid;gap:11px;margin-top:16px}.explain-row{border-top:1px solid rgba(255,255,255,.13);padding-top:10px}.explain-row small{display:block;color:#aeb3ff;text-transform:uppercase;font-size:10px;letter-spacing:.07em;margin-bottom:4px}.explain-row p{margin:0;color:#f2f3ff;font-size:13px;line-height:1.45}.rule{display:flex;gap:10px;color:#f3f3ff;font-size:13px;line-height:1.4;margin:10px 0}.rule i{color:var(--cyan);font-style:normal;font-weight:700;min-width:23px}.action-row{display:flex;gap:9px;flex-wrap:wrap;margin-top:12px}.action-row .btn{flex:1}.login-mark{width:54px;height:54px;border-radius:17px;background:linear-gradient(135deg,#3129be,#22d9e9);color:white;display:grid;place-items:center;font:700 28px Georgia,serif;margin:7px 0 16px}.muted-link{font-size:12px;color:#4f4db8;text-align:center;display:block;margin-top:12px}.idea-summary{padding:13px;border-radius:13px;background:#eff0ff;margin:12px 0}.idea-summary strong{display:block;color:#20235a;font-size:14px}.idea-summary small{color:#686d8b;font-size:12px}.metric-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:11px 0}.metric{border:1px solid #e4e6f2;background:#fff;border-radius:12px;padding:11px}.metric small{display:block;color:#707592;font-size:10px;text-transform:uppercase;letter-spacing:.05em}.metric strong{display:block;color:#28258e;font-size:15px;margin-top:4px}.stage-card{display:flex;gap:11px;align-items:flex-start;background:#fff;border:1px solid #e2e4f1;border-radius:13px;padding:11px 12px;color:var(--ink);text-align:left;width:100%;cursor:pointer}.stage-card:hover{border-color:#8d91e9;background:#f4f5ff}.stage-num{display:grid;place-items:center;width:28px;height:28px;flex:0 0 28px;border-radius:9px;background:#eceeff;color:#332da9;font-size:11px;font-weight:700}.stage-text{flex:1}.stage-text strong{display:block;font-size:13px;margin:1px 0 3px}.stage-text small{color:#737892;font-size:11px;line-height:1.3}.status-pill{font-size:9px;background:#f0f2ff;color:#5559a8;border-radius:99px;padding:4px 7px;white-space:nowrap}.chat{display:grid;gap:10px;margin:12px 0}.bubble{max-width:94%;padding:11px 12px;border-radius:14px;font-size:12px;line-height:1.45}.bubble.user{margin-left:auto;background:#3028bd;color:#fff;border-bottom-right-radius:4px}.bubble.assistant{background:#fff;border:1px solid #e1e3f1;color:#4d5372;border-bottom-left-radius:4px}.bubble.assistant strong{display:block;color:#26256e;margin-bottom:5px;font-size:11px}.quick-asks{display:flex;gap:7px;flex-wrap:wrap;margin:11px 0}.quick-asks .btn{min-height:34px;padding:7px 9px;font-size:10px}.plan-card{border:1px solid #dedff1;background:#fff;border-radius:14px;padding:13px;margin:10px 0}.plan-card.selected{border:2px solid #423bd0;box-shadow:0 5px 16px rgba(48,40,189,.1)}.plan-price{font:700 19px Georgia,"DejaVu Serif",serif;color:#2c28ae}.plan-card p{font-size:11px;margin:5px 0 9px}.checklist{list-style:none;padding:0;margin:8px 0}.checklist li{font-size:12px;color:#555b7b;line-height:1.4;margin:7px 0;padding-left:20px;position:relative}.checklist li:before{content:"✓";position:absolute;left:0;color:#22a251;font-weight:700}.ad-box{border-radius:17px;padding:15px;background:linear-gradient(135deg,#211c92,#4640d2);color:#fff;text-align:center;margin:13px 0}.ad-box p{color:#e2e3ff;margin:7px 0 0;font-size:12px}.ad-count{font:700 30px Georgia,"DejaVu Serif",serif;letter-spacing:.04em;margin:6px 0}.ad-track{height:6px;border-radius:10px;background:rgba(255,255,255,.22);overflow:hidden;margin:11px 0}.ad-track span{display:block;height:100%;background:var(--cyan);transition:width .3s}.roi-output{border:1px solid #dfe2f3;background:#fff;border-radius:13px;padding:12px;margin:10px 0}.roi-output b{color:#2e2aab}.badge{display:inline-block;padding:5px 8px;border-radius:999px;background:#ebfbfd;color:#11727d;font-size:10px;font-weight:700}.fine-print{font-size:10px!important;color:#777c9a!important;line-height:1.4!important}
+.popular-section{margin:18px 0 4px;padding:15px;border:1px solid #e2e4f1;border-radius:16px;background:#fff}.popular-heading{display:flex;justify-content:space-between;align-items:center;gap:8px;margin-bottom:7px}.popular-heading .eyebrow{margin-bottom:3px;font-size:9px}.popular-heading h3{margin:0;font-size:16px}.popular-demo{padding:4px 6px;border-radius:99px;background:#f0f1ff;color:#5559a8;font-size:8px;font-weight:800;letter-spacing:.06em;white-space:nowrap}.popular-list{display:grid;gap:1px}.popular-item{display:grid;grid-template-columns:28px minmax(0,1fr) auto;column-gap:9px;align-items:center;width:100%;padding:10px 1px;border:0;border-bottom:1px solid #edf0f7;background:transparent;color:var(--ink);text-align:left;cursor:pointer}.popular-item:hover .popular-copy strong{color:#3028bd}.popular-rank{grid-row:1/3;display:grid;place-items:center;width:27px;height:27px;border-radius:9px;background:#eff0ff;color:#3028bd;font-size:10px;font-weight:800}.popular-copy{min-width:0}.popular-copy strong,.popular-copy small{display:block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.popular-copy strong{font-size:12px}.popular-copy small{margin-top:3px;color:#777c9a;font-size:9px}.popular-interest{text-align:right}.popular-interest strong,.popular-interest small{display:block}.popular-interest strong{font-size:12px;color:#3028bd}.popular-interest small{font-size:8px;color:#777c9a}.popular-meter{grid-column:2/4;height:3px;margin-top:6px;border-radius:9px;background:#eceeff;overflow:hidden}.popular-meter i{display:block;height:100%;border-radius:9px;background:linear-gradient(90deg,#3028bd,#18c9d8)}.popular-story{display:grid;gap:3px;margin:10px 0 12px;padding:9px 10px;border-left:3px solid #18c9d8;border-radius:0 9px 9px 0;background:#f6f7ff}.popular-story strong{font-size:9px;color:#4246a4;text-transform:uppercase;letter-spacing:.04em}.popular-story span{font-size:10px;line-height:1.4;color:#555b7b}
+@media(max-width:820px){.page{padding:20px 14px 32px}.layout{grid-template-columns:1fr;gap:18px}.phone{height:min(790px,83vh);min-height:660px}.topline{margin-bottom:20px}.tag{display:none}.side{order:-1}.sidebox{padding:15px 16px}.sidebox:not(:first-child){display:none}}
+@media(max-width:420px){.phone{border-width:5px;border-radius:30px;width:100%;height:730px;min-height:640px}.screen{padding:17px 14px}.appbar{padding:0 15px}.page{padding-left:10px;padding-right:10px}.intro h1{font-size:27px}.tab{min-width:61px}}
+/* Clear controls, readable contrast, and responsive app framing */
+.primary{background:#3028bd;color:#fff;border:1px solid #2821a5;box-shadow:0 7px 18px rgba(48,40,189,.22)}
+.secondary{background:#e5e7ff;color:#201b83;border:1px solid #c4c8fa}.ghost{background:#fff;color:#29248f;border:1px solid #aaaee4}
+.choice,.stage-card,.tab,.btn{touch-action:manipulation}.btn:focus-visible,.choice:focus-visible,.stage-card:focus-visible,.tab:focus-visible{outline:3px solid #ff736c;outline-offset:3px}
+.home-ad-dock{flex:0 0 auto;padding:7px 10px 8px;background:#f5f6ff;border-top:1px solid #dfe2f3}.home-ad-dock[hidden]{display:none!important}
+.home-ad-card{min-height:57px;border-radius:12px;padding:8px 10px;background:linear-gradient(110deg,#201b80,#433bd0);color:#fff;display:grid;grid-template-columns:minmax(0,1fr) auto;gap:8px;align-items:center}
+.home-ad-copy{min-width:0}.home-ad-label{display:block;color:#d2d4ff;font-size:9px;font-weight:800;letter-spacing:.09em;text-transform:uppercase}.home-ad-title{display:block;margin:2px 0 1px;font-size:11px;font-weight:800;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.home-ad-text{display:block;color:#eff0ff;font-size:9px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.home-ad-time{min-width:38px;text-align:right;font-size:10px;color:#fff;font-weight:700}.home-ad-track{height:3px;background:rgba(255,255,255,.25);margin-top:5px;border-radius:9px;overflow:hidden}.home-ad-track span{display:block;height:100%;background:#18e3f3;transition:width .3s linear}
+.video-stage{height:146px;border-radius:16px;margin:13px 0;padding:18px;display:grid;place-items:center;text-align:center;color:white;background:radial-gradient(circle at 25% 18%,rgba(24,227,243,.45),transparent 27%),linear-gradient(135deg,#19166c,#4b43dc 62%,#211b95);position:relative;overflow:hidden}.video-stage:before,.video-stage:after{content:"";position:absolute;border:1px solid rgba(255,255,255,.2);border-radius:50%;width:190px;height:190px;right:-45px;top:-90px}.video-stage:after{width:110px;height:110px;right:10px;top:-48px}.video-stage-content{position:relative;z-index:1}.video-stage strong{display:block;font-size:13px;margin:5px 0}.video-stage small{font-size:10px;color:#e2e3ff}.video-play{width:34px;height:34px;margin:auto;border-radius:50%;background:rgba(255,255,255,.18);display:grid;place-items:center;font-size:13px}.reward-point{font-size:25px;font-weight:800;color:#29248f}.appointment-status{display:inline-block;padding:5px 8px;border-radius:999px;background:#fff4d8;color:#765300;font-size:10px;font-weight:700}.quiz-option{justify-content:flex-start;align-items:flex-start}.quiz-option input{margin:3px 0;accent-color:#3028bd}
+@media(max-width:820px){.page{padding:16px 12px 26px}.layout{grid-template-columns:minmax(0,1fr);gap:14px}.phone-wrap{order:0}.side{order:1}.phone{height:min(790px,calc(100svh - 24px));min-height:560px}.sidebox:not(:first-child){display:none}.sidebox{padding:14px 15px}.topline{margin-bottom:16px}}
+@media(max-width:600px){.page{padding:10px 8px 20px}.intro{margin-bottom:14px}.intro h1{font-size:25px}.intro p{font-size:13px}.phone{width:100%;height:min(790px,calc(100svh - 16px));min-height:520px;border-width:5px;border-radius:28px}.status{height:25px;flex-basis:25px}.appbar{height:52px;flex-basis:52px}.screen{padding:16px 13px 14px}.screen h2{font-size:21px}.nav{height:58px;flex-basis:58px}.tab{min-width:0;flex:1;font-size:10px}.home-ad-dock{padding:6px 7px}.home-ad-card{min-height:54px;padding:7px 8px}}
+@media(max-width:360px){.screen{padding-left:11px;padding-right:11px}.tab span{font-size:15px}}
+
+/* Consistent controls and compact, readable screens */
+.btn{min-height:44px;border-radius:11px;font-size:12px;letter-spacing:.01em;box-shadow:none}
+.primary{background:#3028bd;border-color:#2922a9;color:#fff}.secondary{background:#eef0ff;border-color:#d9dcfb;color:#282486}.ghost{background:#fff;border-color:#d7daf0;color:#3028bd}
+.btn:hover{filter:brightness(.97);transform:translateY(-1px)}
+.field input,.field select,.field textarea{border-radius:10px;border-color:#d7dbee;transition:border-color .15s,box-shadow .15s}
+.field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:#625be0;box-shadow:0 0 0 3px rgba(72,64,204,.12)}
+.choice,.stage-card,.popular-item{transition:border-color .15s,background .15s,transform .15s}
+.video-stage-player{height:205px;margin:14px 0 10px}
+.video-close{position:absolute;z-index:2;left:10px;top:10px;width:34px;height:34px;border:1px solid rgba(255,255,255,.55);border-radius:10px;background:rgba(10,9,58,.62);color:#fff;font-size:22px;line-height:1;display:grid;place-items:center;cursor:pointer}
+.video-close:hover{background:rgba(255,255,255,.2)}
+.video-play-button{width:46px;height:46px;border:1px solid rgba(255,255,255,.55);border-radius:50%;background:rgba(255,255,255,.18);color:#fff;display:grid;place-items:center;font-size:17px;cursor:pointer;margin:0 auto 7px}
+.video-play-button:hover{background:rgba(255,255,255,.3)}
+.video-play-button:focus-visible,.video-close:focus-visible{outline:3px solid #ffb0a9;outline-offset:3px}
+
+.screen-back{display:grid;place-items:center;width:36px;height:36px;margin:0 0 12px;padding:0;border:1px solid #e0e3f2;border-radius:11px;background:#fff;color:#4b4ca4;cursor:pointer;transition:background .15s,border-color .15s,color .15s,transform .15s}
+.screen-back svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.screen-back:hover{background:#f0f1ff;border-color:#c9ccef;color:#3028bd;transform:translateX(-1px)}
+.screen-back:focus-visible,.stage-complete-control:focus-visible,.stage-ai-control:focus-visible{outline:3px solid #ff736c;outline-offset:3px}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+.stage-actions{display:grid;gap:9px;margin:18px 0 14px}
+.stage-complete-control,.stage-ai-control{display:flex;align-items:center;gap:11px;width:100%;min-height:58px;padding:10px 12px;border-radius:12px;text-align:left;cursor:pointer;transition:background .15s,border-color .15s,transform .15s}
+.stage-complete-control{border:1px solid #b9e4ce;background:#eff9f3;color:#17663c}
+.stage-complete-control:hover:not(:disabled){background:#e4f5eb;border-color:#7bc49a}
+.stage-complete-control:disabled{cursor:default;opacity:1}
+.stage-complete-icon{display:grid;place-items:center;flex:0 0 30px;height:30px;border-radius:50%;background:#d7f1e1;color:#14763e;font-size:17px;font-weight:800}
+.stage-complete-control strong,.stage-ai-control strong{display:block;font-size:12px}
+.stage-complete-control small,.stage-ai-control small{display:block;margin-top:3px;font-size:10px;line-height:1.3;color:#68718a}
+.stage-ai-control{border:1px solid #d8dcf1;background:#fff;color:#332eb0}
+.stage-ai-control:hover{background:#f5f5ff;border-color:#a8ace2}
+.stage-ai-icon{display:grid;place-items:center;flex:0 0 30px;height:30px;border-radius:9px;background:#eeefff;color:#413bd0;font-size:17px}
+.stage-ai-control>span:nth-child(2){flex:1}
+.stage-navigation{display:grid;gap:9px}
+.stage-navigation .btn{width:100%;min-height:52px}
+.stage-all{margin-top:9px}.stage-all .btn{width:100%;min-height:44px}
+
+.saved-idea-banner{display:flex;align-items:center;gap:10px;margin:0 0 14px;padding:11px 12px;border:1px solid #b9e4ce;border-radius:12px;background:#eff9f3;color:#17663c}
+.saved-idea-check{display:grid;place-items:center;flex:0 0 28px;height:28px;border-radius:50%;background:#d7f1e1;font-weight:800}
+.saved-idea-banner strong,.saved-idea-banner small{display:block}.saved-idea-banner strong{font-size:12px}.saved-idea-banner small{margin-top:3px;font-size:10px;color:#4e755f}
+.appointment-empty{margin:16px 0;padding:22px 17px;border:1px solid #e1e4f3;border-radius:16px;background:#fff;text-align:center}
+.appointment-empty-icon,.appointment-success-icon{display:grid;place-items:center;width:48px;height:48px;margin:0 auto 12px;border-radius:15px;background:#eff0ff;color:#3832bb;font-size:23px;font-weight:700}
+.appointment-empty h3{margin:0 0 5px;font-size:15px}.appointment-empty p{max-width:250px;margin:0 auto;color:#707692;font-size:12px;line-height:1.45}
+.appointment-actions{display:grid;gap:9px;margin-top:15px}.appointment-list{display:grid;gap:10px;margin:16px 0}
+.appointment-card{padding:14px;border:1px solid #e1e4f1;border-radius:14px;background:#fff}
+.appointment-card-head{display:flex;justify-content:space-between;align-items:center;gap:8px}.appointment-card-head h3{margin:0;font-size:14px}
+.appointment-meta{margin:9px 0 5px!important;color:#393c69!important;font-size:12px!important;font-weight:700}
+.appointment-topic{margin:0!important;color:#616782!important;font-size:12px!important;line-height:1.45}
+.appointment-hint{display:block;margin-top:9px;color:#737892;font-size:10px;line-height:1.4}
+.appointment-status{flex:0 0 auto}.appointment-success-icon{background:#e7f6ed;color:#16814b;border-radius:50%;font-size:24px}
+.appointment-confirmation{margin:14px 0}
+.password-control{position:relative;margin-top:6px}.field .password-control input{margin-top:0;padding-right:48px}.password-toggle{position:absolute;top:50%;right:7px;transform:translateY(-50%);display:grid;place-items:center;width:36px;height:36px;border:0;border-radius:9px;background:transparent;color:#6b7090;cursor:pointer}.password-toggle:hover{background:#f0f1ff;color:#3028bd}.password-toggle svg{width:19px;height:19px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}.password-toggle:focus-visible{outline:3px solid #ff736c;outline-offset:1px}
+.gate{width:100%;max-width:430px;margin:0 auto;padding:2px 0 12px}
+.gate h2{margin-bottom:7px}.gate-intro{margin-bottom:16px!important;font-size:13px!important}.gate-intro strong{color:#282783}
+.gate-benefit{display:flex;align-items:center;gap:10px;margin:0 0 16px;padding:12px;border:1px solid #e0e3f4;border-radius:12px;background:#f0f1ff;color:#4d5274;font-size:12px;line-height:1.4}
+.gate-benefit-icon{display:grid;place-items:center;flex:0 0 24px;height:24px;border-radius:50%;background:#dff5e8;color:#17834c;font-weight:800}
+.gate-actions{display:grid;gap:9px}.gate-actions .btn{width:100%;min-height:48px}.gate-note{margin:12px 2px 0!important;color:#777c9a;font-size:10px!important;line-height:1.45!important}
+
+.plans-intro{margin-bottom:14px!important;font-size:12px!important}
+.plan-card{padding:15px;margin:11px 0;border:1px solid #e0e3f1;border-radius:15px;box-shadow:0 3px 10px rgba(31,35,91,.035)}
+.plan-card.plan-recommended{border:1.5px solid #514bd0;background:linear-gradient(180deg,#f5f5ff 0%,#fff 40%)}
+.plan-heading{display:flex;justify-content:space-between;align-items:center;gap:8px;margin-bottom:8px}
+.plan-name{font-size:13px;font-weight:800;color:#24265f}.plan-badge,.plan-current{padding:4px 7px;border-radius:99px;background:#e9eaff;color:#3733ad;font-size:8px;font-weight:800;letter-spacing:.06em}
+.plan-price{font:700 22px Georgia,"DejaVu Serif",serif;color:#2925a5}.plan-price small{font:600 11px "DejaVu Sans",Arial,sans-serif;color:#757995}
+.plan-card .plan-detail{min-height:18px;margin:4px 0 9px;color:#6e7391;font-size:10px;line-height:1.4}
+.plan-card .checklist{margin:8px 0 12px}.plan-card .checklist li{margin:6px 0;font-size:11px}
+.plan-card>.btn{width:100%;min-height:45px}.plan-card>.btn:disabled{background:#edf0f6;border-color:#e0e3eb;color:#636985}
+</style>
+</head>
+<body>
+<div class="page">
+  <header class="topline">
+    <div class="brand"><div class="mark" aria-hidden="true">S</div><div>Softnovations<small>Startup King</small></div></div>
+    <div class="tag">Startup planning experience</div>
+  </header>
+  <section class="intro">
+    <h1>From first idea to exit strategy</h1>
+    <p>See how a founder signs in, gets a tailored plan, chooses how to unlock extra answers, and moves through each stage of building a business.</p>
+  </section>
+  <main class="layout">
+    <div class="phone-wrap">
+      <section class="phone" aria-label="Startup King app">
+        <div class="status"><span>9:41</span><span>● ● ● ▰</span></div>
+        <div class="appbar"><div class="appname">Startup <span>King</span></div><div class="avatar" id="app-avatar">S</div></div>
+        <div class="screen" id="app-screen" aria-live="polite"></div>
+        <div class="home-ad-dock" id="home-ad-dock" hidden aria-label="Sponsored vendor advertisement"></div>
+        <nav class="nav" id="app-nav" aria-label="App navigation"></nav>
+      </section>
+    </div>
+    <aside class="side">
+      <section class="sidebox" aria-live="polite">
+        <div class="step-label" id="flow-step">Sign in</div>
+        <h2 id="flow-title">Welcome to Startup King</h2>
+        <p id="flow-description">Sign in to create your startup plan.</p>
+        <div class="explain-list">
+          <div class="explain-row"><small>What you do</small><p id="flow-action">Enter your account details.</p></div>
+          <div class="explain-row"><small>What you receive</small><p id="flow-value">A personal workspace for your startup journey.</p></div>
+          <div class="explain-row"><small>Cost and access</small><p id="flow-cost">Core planning starts free. AI, ads and payments need internet.</p></div>
+          <div class="explain-row"><small>Next</small><p id="flow-next">Set your experience level and goal.</p></div>
+        </div>
+      </section>
+      <section class="sidebox">
+        <div class="step-label">Journey progress</div>
+        <h2 id="journey-progress-title">0 of 10 stages</h2>
+        <div class="progress"><span id="journey-progress-bar" style="width:0%"></span></div>
+        <p id="journey-progress-copy">Your plan can continue through exit strategy.</p>
+      </section>
+      <section class="sidebox">
+        <p class="fine-print" style="color:#c6c8ff!important">Saved startup plans and selected guides can stay available offline. AI help, ad verification and payment need an internet connection.</p>
+        <div class="action-row"><button class="btn secondary" type="button" data-act="restart">Restart journey</button></div>
+      </section>
+    </aside>
+  </main>
+</div>
+<script>
+(function(){
+  var app=document.getElementById("app-screen");
+  var nav=document.getElementById("app-nav");
+  var state;
+  var adTimer=null;
+  var vendorTimer=null;
+  var cooldownTimer=null;
+  var homeAdTimer=null;
+  var homeAdIndex=0;
+  var homeAdRemaining=5;
+  var stages=[
+    {key:"validation",title:"Validate the idea",short:"Check demand, competition, cost and founder fit before committing.",output:"A feasibility score, key risks and a low-cost test.",checks:["Talk with potential customers.","Compare nearby alternatives and demand."]},
+    {key:"model",title:"Build the business model",short:"Clarify who buys, what they value and how the business earns.",output:"A one-page business model with customers, value and revenue.",checks:["Define the target customer.","Estimate price, sales and main costs."]},
+    {key:"setup",title:"Setup and legal",short:"Review the registrations and documents for your location and business type.",output:"A local setup checklist with documents and estimated steps.",checks:["Confirm the business structure.","Check permits, registration and required documents."]},
+    {key:"finance",title:"Financial plan and ROI",short:"Estimate setup cost, monthly cash needs, runway, break-even and return.",output:"A finance view with an editable ROI estimate and payback period.",checks:["List startup costs and monthly operating costs.","Test the estimate with cautious sales assumptions."]},
+    {key:"marketing",title:"Branding and first customers",short:"Plan how customers will discover and buy from the business.",output:"A practical launch plan with early sales channels.",checks:["Choose a clear offer and brand message.","Select two channels to test with a small budget."]},
+    {key:"operations",title:"Operations and team",short:"Plan daily work, roles, supplies, service quality and useful KPIs.",output:"A simple operating checklist and team plan.",checks:["Map the daily customer workflow.","Set one quality measure and one sales measure."]},
+    {key:"funding",title:"Funding readiness",short:"Compare self-funding, loans, grants and investor options.",output:"A funding gap and a preparation checklist.",checks:["Confirm how much funding is needed.","Prepare financial records and an investor summary."]},
+    {key:"growth",title:"Growth and scale",short:"Use performance milestones to decide when to hire or expand.",output:"Growth milestones linked to sales, capacity and margin.",checks:["Track repeat sales and unit margins.","Expand only after the current process is steady."]},
+    {key:"risk",title:"Risk and compliance",short:"Record operating, financial, market and compliance risks.",output:"A risk list with practical prevention actions.",checks:["Choose the three most likely risks.","Assign one action and review date to each."]},
+    {key:"exit",title:"Exit strategy",short:"Prepare for a sale, acquisition, buyout, succession, merger or closure.",output:"A readiness checklist and a timeline for your preferred path.",checks:["Keep ownership, contracts and accounts organized.","Compare sale, succession, buyout, merger and closure options."]}
+  ];
+  var ideasByCategory={
+    "Food Shops & Restaurants":[
+      {id:"takeaway",title:"Small Takeaway Food Shop",cost:"3–5M MMK",minBudget:3000000,maxBudget:5000000,skills:["cook","food"],partTime:false,fit:"A short menu can use cooking experience and keep the first setup focused.",risk:"Rent and ingredient costs can reduce the margin.",first:"Test three popular meals with nearby customers."},
+      {id:"catering",title:"Home Catering",cost:"2–4M MMK",minBudget:2000000,maxBudget:4000000,skills:["cook","food","baking"],partTime:true,fit:"Pre-orders can reduce rent and help match production to demand.",risk:"Order volume and delivery timing may vary.",first:"Offer a small menu to a known customer group."},
+      {id:"delivery",title:"Delivery Kitchen",cost:"4–6M MMK",minBudget:4000000,maxBudget:6000000,skills:["cook","food","delivery"],partTime:true,fit:"A delivery-first setup focuses spending on food preparation and packaging.",risk:"Platform fees and delivery reliability affect profit.",first:"Run a short delivery test before renting a larger space."}
+    ],
+    "Services":[
+      {id:"cleaning",title:"Home Cleaning Service",cost:"1–3M MMK",minBudget:1000000,maxBudget:3000000,skills:["clean","service"],partTime:true,fit:"A small service area can be tested with basic equipment and repeat customers.",risk:"Travel time and customer trust affect the number of daily jobs.",first:"Offer a trial service to five nearby households."},
+      {id:"repair",title:"Phone Repair Service",cost:"2–5M MMK",minBudget:2000000,maxBudget:5000000,skills:["repair","phone","technical"],partTime:false,fit:"Technical skill can become a focused service with repair fees and repeat referrals.",risk:"Parts quality, repair accuracy and warranty expectations matter.",first:"Start with common repairs and publish clear service terms."},
+      {id:"digital",title:"Digital Design Service",cost:"1–3M MMK",minBudget:1000000,maxBudget:3000000,skills:["design","computer","marketing"],partTime:true,fit:"A service business can start from home with a small equipment budget.",risk:"Finding steady clients and pricing revisions can be difficult.",first:"Prepare three sample projects and contact a defined customer group."}
+    ],
+    "Retail and reselling":[
+      {id:"online-shop",title:"Online Reseller Shop",cost:"1–3M MMK",minBudget:1000000,maxBudget:3000000,skills:["selling","retail","marketing"],partTime:true,fit:"Small stock batches let you test products through social channels before renting a shop.",risk:"Unsold inventory and supplier delays can tie up cash.",first:"Test five products with pre-orders before buying larger stock."},
+      {id:"market-stall",title:"Market Stall",cost:"2–4M MMK",minBudget:2000000,maxBudget:4000000,skills:["selling","retail"],partTime:true,fit:"A stall offers direct customer feedback with a smaller setup than a full store.",risk:"Location fees and daily foot traffic affect sales.",first:"Compare two market locations and track customer demand."},
+      {id:"local-shop",title:"Neighborhood Essentials Shop",cost:"4–7M MMK",minBudget:4000000,maxBudget:7000000,skills:["selling","retail"],partTime:false,fit:"Everyday products can generate repeat visits when the location suits local needs.",risk:"Stock turnover, rent and competitor prices affect cash flow.",first:"List the ten products local customers ask for most."}
+    ],
+    "Household and handmade":[
+      {id:"tailoring",title:"Custom Tailoring Service",cost:"2–5M MMK",minBudget:2000000,maxBudget:5000000,skills:["sewing","tailoring","handmade"],partTime:true,fit:"Skill-based orders can begin from home with a small range of services.",risk:"Delivery dates and material costs need careful tracking.",first:"Show sample work and take a limited number of trial orders."},
+      {id:"handmade",title:"Handmade Home Products",cost:"1–3M MMK",minBudget:1000000,maxBudget:3000000,skills:["craft","handmade","art"],partTime:true,fit:"Small batches let you test interest before investing in equipment or stock.",risk:"Production time and inconsistent demand can limit profit.",first:"Create three products and collect pre-orders."},
+      {id:"home-bakery",title:"Home Bakery",cost:"2–4M MMK",minBudget:2000000,maxBudget:4000000,skills:["baking","cooking","food"],partTime:true,fit:"Pre-orders and a short menu can reduce waste in the early stage.",risk:"Food safety, delivery and ingredient costs need close attention.",first:"Test a small menu with pre-orders and record every cost."}
+    ]
+  };
+  var mainBusinessOptions={
+    "Food & Beverage":["Food Shops & Restaurants","Drinks","Bakery & Dessert","Food Production"],
+    "Services":["Beauty & Personal Care","Hospitality & Tourism","Technology & Digital","Education & Training","Healthcare","Transportation & Logistics","Professional Services","Creative & Events"],
+    "Industry":["Retail & Wholesale","Manufacturing","Construction & Building","Agriculture & Agribusiness","Packaging & Distribution","Mining & Natural Resources"]
+  };
+  var subtypeOptions={
+    "Food Shops & Restaurants":["Myanmar Restaurant","Chinese Restaurant","Thai Restaurant","Indian Restaurant","Fast Food Restaurant","Western Restaurant","Street Food","BBQ / Hot Pot","Noodle Shop","Rice & Curry Shop","Snack Shop"],
+    "Drinks":["Tea Shop","Coffee Shop","Café","Juice Shop","Smoothie Shop","Bubble Tea Shop","Beverage Shop"],
+    "Bakery & Dessert":["Bakery","Ice Cream Shop","Dessert Shop"],
+    "Food Production":["Packaged Food","Snack Production","Dried Food","Pickle & Condiment Production","Traditional Food Production","Food Processing","Beverage Production"],
+    "Beauty & Personal Care":["Event Make-up","Press-on Nails","Home spa & massage","Skincare & Aesthetic","Hair styling & barber","Lash & Brow","Tattoos & body art","Weight loss Consultation"],
+    "Hospitality & Tourism":["Local tour guide","Private car rental","Homestay management","Ticket booking agent","Airport pickup/drop","Hotel & resort booking","Camping & trekking guide","Food tour guide"],
+    "Technology & Digital":["Social media management","Wi-Fi solar setup","Mobile & laptops repair","Graphic design","Website development","Data entry & typing","CCTV & smart lock setup","Software installation"],
+    "Education & Training":["Academic tutoring","Language classes","Computer literacy","Music & art lessons","Fitness & yoga","Driving instructor","Public speaking coaching","Professional exam prep"],
+    "Healthcare":["Elderly care","Home nursing","Tele-doctor agent","Physiotherapy assistant","Pharmacy delivery","Dental care assistant","Mental health counseling","Postnatal care"],
+    "Transportation & Logistics":["Same-day delivery","Personal Shopping","Bus gate drop off","Rider & express carry","Furniture moving service","Inter-city freight","Cold chain delivery","Warehouse drop-off"],
+    "Professional Services":["Document translation","Passport & visa agent","Small business accounting","Contract advisory","Business registration agent","Notary & verification","Tax return agent","Recruitment & staffing"],
+    "Creative & Events":["Product photography","TikTok/reels video editing","Event decoration","Sound system rental","Event emcee (MC)","DJ & live music","Flower arrangement","Photo/video editing"],
+    "Retail & Wholesale":["Supermarket, Mini-mart","Online fashion shop","Electronic & mobile shop","Cosmetic & beauty shop","Wholesale distribution","Convenience store","Pharmacy & medical shop","Home & kitchen store","Kids goods","Jewelry Accessories","Footwear & bags","Stationery shop"],
+    "Manufacturing":["Food Manufacturing","Garment & textile","Plastic & packaging","Furniture","Chemical cleaning supply","Hardware fabrication","Craft & handmade goods","Printing & paper production","Pharmaceutical manufacturing","Electronic components","Construction material production"],
+    "Construction & Building":["Construction material production"],
+    "Agriculture & Agribusiness":["Crop farming","Livestock farming","Agricultural products"],
+    "Packaging & Distribution":["Packaging service","Product distribution"],
+    "Mining & Natural Resources":["Mining services","Natural resources trading"]
+  };
+  var locationOptions=["Yangon","Mandalay","Naypyidaw","Bago","Mawlamyine","Taunggyi","Pathein","Other"];
+  var guides={
+    validation:{title:"How to validate an idea",answer:"Speak with likely customers, test a small offer, and compare real interest with nearby alternatives before investing more.",next:"Open validation checklist",stage:"validation"},
+    finance:{title:"How to estimate ROI",answer:"Estimate monthly sales minus operating costs. Divide 12 months of estimated net profit by your startup investment, then check the payback period.",next:"Open the finance stage",stage:"finance"},
+    growth:{title:"When to grow",answer:"Expand after repeat demand, positive unit margins and reliable operations are clear. Set a sales or capacity milestone before hiring or adding a location.",next:"Open growth plan",stage:"growth"},
+    exit:{title:"How to plan an exit",answer:"Compare a business sale, acquisition, founder buyout, succession, merger or closure. Keep clean accounts and ownership records, then set a readiness timeline.",next:"Open exit strategy",stage:"exit"}
+  };
+  var vendors=[
+    {id:"equipment",title:"Kitchen equipment supplier",text:"Sponsored partner introduction for ovens, burners and small-shop setup."},
+    {id:"packaging",title:"Food packaging supplier",text:"Sponsored partner introduction for takeaway containers and labels."},
+    {id:"delivery",title:"Local delivery service",text:"Sponsored partner introduction for local order delivery."}
+  ];
+  function freshState(){return {screen:"login",screenHistory:[],lastRenderedScreen:null,skipHistory:false,passwordVisible:false,profile:{name:"Ko Aung",email:"",level:"Beginner",profession:"Food preparation",goal:"Start a new business",location:"Yangon"},mainBusiness:"Food & Beverage",category:"Food Shops & Restaurants",subtype:"Myanmar Restaurant",businessDetail:"",budget:"5000000",availableTime:"Full-time",skill:"Cooking",interest:"Cooking",idea:"takeaway",savedIdea:false,savedIdeaName:"",completed:[],stageIndex:0,freeLookups:0,premium:false,plan:"",pending:null,assistantHistory:[],currentGuide:"",currentVendor:"",adRemaining:30,vendorRemaining:5,adCooldownUntil:0,adPaused:false,rewardMode:false,rewardCredits:0,rewardMessage:"",rewardQuizFeedback:"",appointments:[],lastAppointment:null,roi:{investment:"5000000",revenue:"2500000",costs:"1900000"},roiCalculated:false,roiSaved:false,payment:{kind:"",plan:"",amount:0},adOnly:false,pendingStageIndex:null,signup:false,toast:""};}
+  state=freshState();
+  function esc(s){return String(s==null?"":s).replace(/[&<>"']/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;","'":"&#39;"}[c];});}
+  function money(n){return "MMK "+Math.round(Number(n)||0).toLocaleString("en-US");}
+  function progressCount(){return state.completed.length;}
+  function hasDone(key){return state.completed.indexOf(key)>=0;}
+  function markDone(key){if(!hasDone(key))state.completed.push(key);}
+  function button(text,act,kind,value,attrs){return '<button class="btn '+(kind||"primary")+'" type="button" data-act="'+esc(act)+'"'+(value!=null?' data-value="'+esc(value)+'"':'')+(attrs?' '+attrs:'')+'>'+text+'</button>';}
+  function choice(title,subtitle,act,value,extra){return '<button class="choice" type="button" data-act="'+esc(act)+'" data-value="'+esc(value||"")+'"><span><strong>'+esc(title)+'</strong><small>'+esc(subtitle)+'</small></span><span class="chev">›</span></button>'+(extra||"");}
+  function formatProgress(){var pct=Math.round((progressCount()/stages.length)*100);document.getElementById("journey-progress-title").textContent=progressCount()+" of "+stages.length+" stages";document.getElementById("journey-progress-copy").textContent=progressCount()===stages.length?"Your plan includes steps through exit strategy.":"Your plan can continue through exit strategy.";document.getElementById("journey-progress-bar").style.width=pct+"%";}
+  function setExplanation(){
+    var x={step:"Startup King",title:"Welcome to Startup King",description:"Sign in to create your startup plan.",action:"Enter your email or phone and password.",value:"A personal workspace for your startup journey.",cost:"Core planning starts free. AI, ads and payments need internet.",next:"Set your experience level and goal."};
+    var map={
+      login:{step:state.signup?"Create account":"Sign in",title:state.signup?"Create your Startup King account":"Welcome to Startup King",description:state.signup?"Create an account to save and continue your startup plan.":"Sign in to create your startup plan.",action:"Enter your email or phone and password.",value:"A personal workspace for your startup journey.",cost:"Core planning starts free. AI, ads and payments need internet.",next:"Set your experience level and goal."},
+      onboarding:{step:"Founder profile",title:"Personalize your path",description:"Startup King adjusts the question depth and guidance to your experience.",action:"Choose your level, profession, location and goal.",value:"A startup path that reflects your background.",cost:"No answer charge at this step.",next:"Choose the business field you want to explore."},
+      home:{step:"Your workspace",title:"Your startup home",description:"Continue your plan or get help with a focused question.",action:"Open ideas, your roadmap, guides or AI Help.",value:"A single place to track progress from idea to exit.",cost:state.premium?"Your subscription removes answer charges and sponsored placements.":"Sponsored vendor clips autoplay at the bottom for five seconds each.",next:"Start with your idea or open your current plan."},
+      discovery:{step:"Idea discovery",title:"Choose a business direction",description:"Pick a field and type. Matching uses prepared business data and your profile.",action:"Select the area and type that interest you.",value:"Three ranked ideas with costs and reasons for fit.",cost:"No charge to compare ideas. Sponsored vendors are marked clearly.",next:"Add your budget, location, time and skills."},
+      assessment:{step:"Your situation",title:"Add a few details",description:"Use realistic estimates so recommendations fit your situation.",action:"Enter budget, city, available time and experience.",value:"A better-matched list with costs and practical first actions.",cost:"Assessment answers are free. Paid answer lookups are separate.",next:"Review your three ranked ideas."},
+      results:{step:"Idea recommendations",title:"Compare your matches",description:"Review the strongest matches for the information you entered.",action:"Compare the fit, estimated cost and first test for each idea.",value:"Three options ranked from the prepared startup library.",cost:"Opening recommendations is free.",next:"Choose one idea to inspect in detail."},
+      detail:{step:"Idea details",title:"Review before committing",description:"See why the idea may fit and what to test before spending more.",action:"Review costs, requirements, risks and first actions.",value:"A concise starting checklist and a path into the full roadmap.",cost:state.premium?"Included with your subscription.":"Detailed guidance is included. Extra answer lookups use the ad or 500 MMK choice.",next:"Save the idea or open the startup plan."},
+      roadmap:{step:"Startup roadmap",title:"Follow the complete journey",description:"Move through the startup lifecycle in order, from idea validation to exit strategy.",action:"Open a stage, review its checklist and mark progress.",value:"Validation, planning, setup, finance, launch, operations, funding, growth, risk and exit actions.",cost:state.premium?"Your subscription removes ads and per-answer fees.":"Watch a completed 30-second ad each time you open a roadmap stage.",next:"Start with validation or jump to the stage you need."},
+      stage:{step:"Startup roadmap",title:"Work through this stage",description:"Each stage ends with a specific output and a practical next action.",action:"Review the checklist and update the plan as you progress.",value:"A short, actionable deliverable for the selected stage.",cost:state.premium?"Included with your subscription.":"Watch a completed 30-second ad to open each roadmap stage.",next:"Continue to the next stage, through exit strategy."},
+      roi:{step:"Profile tools",title:"Estimate your return",description:"Open the separate ROI calculator from Profile.",action:"Enter investment, monthly sales and monthly operating costs.",value:"Estimated monthly profit, 12-month ROI and payback time.",cost:"This is a planning estimate from your inputs.",next:"Save the estimate to your profile."},
+      knowledge:{step:"Startup guides",title:"Browse practical answers",description:"Open concise guides for validation, finance, growth and exit planning.",action:"Choose the guide that addresses your next decision.",value:"A direct answer and a useful next step.",cost:state.premium?"Guides are included in your subscription.":"Two answer lookups are free. Then choose a 30-sec ad or pay 500 MMK per answer.",next:"Use the guide, continue your plan or ask the AI helper."},
+      article:{step:"Startup guide",title:"Get a focused answer",description:"The guide gives a short answer and points to the related roadmap step.",action:"Read the key advice, then open its checklist.",value:"One concise recommendation and the stage where it applies.",cost:state.premium?"Included with your subscription.":"Each new answer after the free lookups can use a 30-sec ad or 500 MMK.",next:"Continue with the related stage or ask a follow-up."},
+      assistant:{step:"AI helper",title:"Ask a follow-up question",description:"The AI helper gives a brief answer and directs you to a practical next step.",action:"Ask about ROI, validation, growth, exit or your current stage.",value:"A short answer with a suggested roadmap action.",cost:state.premium?"Unlimited AI help is included in your subscription.":"Two lookups are free; later answers cost one ad or 500 MMK each.",next:"Open the suggested plan stage if you need more detail."},
+      answergate:{step:"Choose answer access",title:"How would you like to open this answer?",description:"Choose the option that suits you. One unlock opens one answer.",action:"Watch one 30-second rewarded ad, pay 500 MMK, or subscribe.",value:"The answer opens as soon as the selected option completes.",cost:"Rewarded ads have a 60-second cooldown. Payment is available during the wait.",next:"Select an option below."},
+      adplayer:{step:"Rewarded answer",title:"Watch the sponsored video",description:"A completed 30-second ad unlocks the answer you requested.",action:"Keep the ad open until the countdown ends.",value:"One answer unlocks after verified completion.",cost:"A 60-second cooldown starts before another rewarded ad.",next:"The requested answer opens automatically."},
+      plans:{step:"Subscription",title:"Choose your plan",description:"A subscription removes answer unlock charges and ad interruptions.",action:"Choose one month or one year.",value:"Unlimited answer lookups and AI follow-ups while active.",cost:"MMK 50,000 for one month or MMK 500,000 for one year.",next:"Review the amount and confirm in checkout."},
+      payment:{step:"Secure checkout",title:"Review your payment",description:"Confirm the selected answer unlock or subscription amount.",action:"Check the item and choose a payment method.",value:"The answer opens or your subscription activates after confirmation.",cost:"Answer unlock: MMK 500. Monthly plan: MMK 50,000. Yearly plan: MMK 500,000.",next:"Confirm to continue."},
+      "payment-success":{step:"Payment status",title:"Payment confirmed",description:"Your selected access is ready.",action:"Continue to the answer or your account.",value:"The answer opens or your subscription becomes active.",cost:"Your selected amount is shown in the checkout summary.",next:"Return to your current task."},
+      partners:{step:"Sponsored vendors",title:"Explore local partners",description:"Vendor placements are marked Sponsored and autoplay for five seconds at the bottom of Home.",action:"Choose a partner to review its details.",value:"Partner details for the selected supplier or service.",cost:"Vendor clips are optional and do not unlock paid answers.",next:"Return to Home or continue your plan."},
+      vendorad:{step:"Sponsored vendor",title:"Partner introduction",description:"This sponsored vendor clip plays for five seconds.",action:"Let the short introduction finish to view the partner details.",value:"One local supplier or service profile.",cost:"Five seconds per vendor. This does not count as a rewarded answer ad.",next:"The partner profile opens automatically."},
+      vendor:{step:"Partner profile",title:"Partner details",description:"Review the service offered by this sponsored business.",action:"Check whether the supplier or service is relevant to your plan.",value:"A partner contact option related to your startup stage.",cost:"Sponsored listings are separate from answer charges.",next:"Return to your roadmap or compare another partner."},
+      profile:{step:"Profile and tools",title:"Your account and founder tools",description:"Manage your account, saved ROI estimate, rewards and professional appointments.",action:"Choose a profile tool or update your access plan.",value:"One place for ROI, video rewards and appointment requests.",cost:state.premium?"Active subscription: "+(state.plan==="yearly"?"MMK 500,000/year":"MMK 50,000/month")+".":"Your current access plan is free.",next:"Open a profile tool or return to your startup plan."},
+      rewards:{step:"Profile tools",title:"Video rewards",description:"Watch a short sponsored video, then answer a question to earn a point.",action:"Start a 30-second video when the cooldown is clear.",value:"A reward point is added after a correct answer.",cost:"A one-minute cooldown starts after each completed rewarded video.",next:"Answer the question shown after the video."},
+      "reward-video":{step:"Rewards",title:"Watch the sponsored video",description:"Let the 30-second video finish, then answer one question.",action:"Keep this screen open while the countdown runs.",value:"A short knowledge question follows the video.",cost:"A one-minute cooldown starts when the video finishes.",next:"Answer correctly to earn one reward point."},
+      "reward-quiz":{step:"Rewards",title:"Answer to earn a point",description:"Choose the useful first step before investing in a business.",action:"Select the best answer and submit it.",value:"A correct answer adds one reward point to Profile.",cost:"The video cooldown continues while you answer.",next:"Return to Rewards to see your points."},
+      appointments:{step:"Professional support",title:"Manage appointments",description:"Request a time with a startup professional.",action:"Review existing requests or choose a preferred time.",value:"A pending request that the professional can confirm.",cost:"Availability and any fee are confirmed before the booking is finalized.",next:"Choose a date, time and meeting format."},
+      "appointment-form":{step:"Professional support",title:"Request an appointment",description:"Share the topic and a time that works for you.",action:"Choose a professional area, date, time and meeting format.",value:"A request saved to your appointment list.",cost:"No fee is shown until the professional confirms details.",next:"Submit your preferred appointment details."},
+      "appointment-confirmed":{step:"Request sent",title:"Appointment request saved",description:"Your preferred time is recorded as pending confirmation.",action:"Review the request in Profile appointments.",value:"A clear request for the professional to confirm.",cost:"Final availability and any fee are confirmed before booking.",next:"Return to Profile or create another request."}
+    };
+    if(state.screen==="login"&&state.signup){x={step:"Create account",title:"Create your Startup King account",description:"Create an account to save and continue your startup plan.",action:"Enter your email or phone and choose a password.",value:"A personal workspace for your startup journey.",cost:"Core planning starts free. AI, ads and payments need internet.",next:"Set your experience level and goal."};}
+    if(state.screen==="stage"){
+      var st=stages[state.stageIndex];
+      x={step:"Stage "+(state.stageIndex+1)+" of "+stages.length,title:st.title,description:st.short,action:"Complete the short checklist for this stage.",value:st.output,cost:state.premium?"Included with your subscription.":"Core plan content is free; answer lookups can be unlocked separately.",next:state.stageIndex===stages.length-1?"Review your exit strategy and readiness checklist.":"Continue to "+stages[state.stageIndex+1].title+"."};
+    }else{x=map[state.screen]||x;}
+    document.getElementById("flow-step").textContent=x.step;
+    document.getElementById("flow-title").textContent=x.title;
+    document.getElementById("flow-description").textContent=x.description;
+    document.getElementById("flow-action").textContent=x.action;
+    document.getElementById("flow-value").textContent=x.value;
+    document.getElementById("flow-cost").textContent=x.cost;
+    document.getElementById("flow-next").textContent=x.next;
+  }
+  function drawNav(){
+    var visible=["home","results","detail","roadmap","stage","roi","knowledge","article","assistant","partners","vendor","profile","rewards","appointments","appointment-form","appointment-confirmed"].indexOf(state.screen)>=0;
+    nav.hidden=!visible;
+    if(!visible){nav.innerHTML="";return;}
+    var active=state.screen==="roadmap"||state.screen==="stage"?"plan":state.screen==="assistant"?"ask":state.screen==="profile"||state.screen==="partners"||state.screen==="vendor"||state.screen==="roi"||state.screen==="rewards"||state.screen.indexOf("appointment")===0?"profile":state.screen==="home"?"home":"";
+    nav.innerHTML='<button class="tab '+(active==="home"?"active":"")+'" type="button" data-act="nav-home"><span>⌂</span>Home</button><button class="tab '+(active==="plan"?"active":"")+'" type="button" data-act="nav-plan"><span>▦</span>My plan</button><button class="tab '+(active==="ask"?"active":"")+'" type="button" data-act="nav-ask"><span>✦</span>AI Help</button><button class="tab '+(active==="profile"?"active":"")+'" type="button" data-act="nav-profile"><span>◉</span>Profile</button>';
+  }
+  function showToast(text){state.toast=text;var t=document.getElementById("toast");if(t){t.textContent=text;t.classList.add("show");setTimeout(function(){t.classList.remove("show");},2400);}}
+  function currentIdeas(){
+    var base=ideasByCategory[state.category]||ideasByCategory["Services"]||[];
+    var examples=(subtypeOptions[state.category]||[]).slice();
+    if(state.subtype&&state.subtype!=="Not sure"&&examples.indexOf(state.subtype)<0)examples.unshift(state.subtype);
+    if(!examples.length)return base;
+    return examples.map(function(name,index){var template=base[index%base.length];return {id:"idea-"+index,title:name,cost:template.cost,minBudget:template.minBudget,maxBudget:template.maxBudget,skills:template.skills,partTime:template.partTime,fit:template.fit,risk:template.risk,first:template.first};});
+  }
+  function allIdeas(){var out=[];Object.keys(ideasByCategory).forEach(function(key){out=out.concat(ideasByCategory[key]);});return out;}
+  function ideaById(id){var selected=currentIdeas();for(var j=0;j<selected.length;j++)if(selected[j].id===id)return selected[j];var all=allIdeas();for(var i=0;i<all.length;i++)if(all[i].id===id)return all[i];return selected[0];}
+  function rankedIdeas(){var b=Number(state.budget)||0;var terms=(String(state.skill||"")).toLowerCase().split(/[^a-z]+/).filter(function(x){return x.length>2;});return currentIdeas().map(function(idea,index){var score=0;if(b>=idea.minBudget&&b<=idea.maxBudget)score+=3;else if(b>0&&b>=idea.minBudget*.8&&b<=idea.maxBudget*1.2)score+=1;for(var i=0;i<terms.length;i++)if(idea.skills.some(function(t){return t.indexOf(terms[i])>=0||terms[i].indexOf(t)>=0;})){score+=2;break;}if(state.availableTime==="Part-time"&&idea.partTime)score+=1;return {idea:idea,score:score,index:index};}).sort(function(a,b){return b.score-a.score||a.index-b.index;}).slice(0,3).map(function(x){return x.idea;});}
+  function stageByKey(key){for(var i=0;i<stages.length;i++)if(stages[i].key===key)return i;return 0;}
+  function levelNote(){if(state.profile.level==="Professional")return "Professional view: compare margins, capacity and growth measures.";if(state.profile.level==="Standard")return "Standard view: include costs, milestones and operating checks.";return "Beginner view: use short steps and test the idea before spending more.";}
+  function renderRoadmap(){
+    var savedIdeaNotice=state.savedIdea?'<div class="saved-idea-banner"><span class="saved-idea-check" aria-hidden="true">✓</span><span><strong>Idea added to your plan</strong><small>'+esc(state.savedIdeaName||"Your selected idea")+'</small></span></div>':"";
+    var h=savedIdeaNotice+'<div class="eyebrow">Your '+stages.length+'-stage journey</div><h2>Startup roadmap</h2><p>Work through the stages in order or open the item you need today.</p><div class="progress"><span style="width:'+Math.round((progressCount()/stages.length)*100)+'%"></span></div><div class="stack">';
+    stages.forEach(function(s,i){var status=hasDone(s.key)?"Complete":i===state.stageIndex&&state.screen==="stage"?"In progress":"To do";h+='<button class="stage-card" type="button" data-act="open-stage" data-value="'+s.key+'"><span class="stage-num">'+String(i+1).padStart(2,"0")+'</span><span class="stage-text"><strong>'+esc(s.title)+'</strong><small>'+esc(s.short)+'</small></span><span class="status-pill">'+status+'</span></button>';});
+    h+='</div><p class="note">The roadmap covers validation, planning, launch, growth, risk and exit strategy.</p>';return h;
+  }
+  function renderStage(){
+    var s=stages[state.stageIndex];var done=hasDone(s.key);
+    var h='<div class="eyebrow">Stage '+(state.stageIndex+1)+' of '+stages.length+'</div><h2>'+esc(s.title)+'</h2><p>'+esc(s.short)+'</p><div class="idea-summary"><strong>What you finish with</strong><small>'+esc(s.output)+'</small></div><div class="section"><h3>Your checklist</h3><ul class="checklist">';
+    s.checks.forEach(function(c){h+='<li>'+esc(c)+'</li>';});
+    h+='</ul></div>';
+    if(s.key==="finance"){
+      h+='<div class="callout">Use ROI and payback to compare assumptions. The calculator is in your Profile tools.</div>'+button("Open Profile tools","nav-profile","secondary");
+    }else if(s.key==="exit"){
+      h+='<div class="section"><h3>Exit options to compare</h3><div class="chips"><span class="chip">Business sale</span><span class="chip">Acquisition</span><span class="chip">Founder buyout</span><span class="chip">Succession</span><span class="chip">Merger</span><span class="chip">Closure</span></div></div><div class="callout">Keep ownership records, contracts and financial statements ready before choosing a path.</div>';
+    }else if(s.key==="setup"){
+      h+='<div class="callout">Requirements depend on your country, city and industry. Review the local checklist before filing or paying fees.</div>';
+    }else if(s.key==="validation"){
+      h+='<div class="metric-grid"><div class="metric"><small>Demand</small><strong>Test first</strong></div><div class="metric"><small>Risk</small><strong>Review costs</strong></div></div>';
+    }
+    h+='<div class="stage-actions"><button class="stage-complete-control" type="button" data-act="complete-stage" data-value="'+esc(s.key)+'" aria-pressed="'+(done?'true':'false')+'" '+(done?'disabled':'')+'><span class="stage-complete-icon" aria-hidden="true">'+(done?'✓':'○')+'</span><span><strong>'+(done?'Stage completed':'Mark this stage complete')+'</strong><small>'+(done?'Progress saved':'Save your progress for this stage')+'</small></span></button><button class="stage-ai-control" type="button" data-act="ask-stage" data-value="'+esc(s.title)+'"><span class="stage-ai-icon" aria-hidden="true">✦</span><span><strong>Get guidance for this stage</strong><small>Ask Startup King AI</small></span><span class="chev" aria-hidden="true">›</span></button></div><div class="stage-navigation">';
+    if(state.stageIndex>0)h+=button("← Previous stage","prev-stage","ghost");
+    if(state.stageIndex<stages.length-1)h+=button("Continue to "+stages[state.stageIndex+1].title,"next-stage","primary");
+    else h+=button("Finish exit plan","finish-journey","primary");
+    h+='</div><div class="stage-all">'+button("View all stages","nav-plan","ghost")+'</div>';return h;
+  }
+  function roiMetrics(){
+    var invest=Number(state.roi.investment)||0;var revenue=Number(state.roi.revenue)||0;var costs=Number(state.roi.costs)||0;var monthly=revenue-costs;var annual=monthly*12;var roi=invest>0?(annual/invest)*100:null;var payback=monthly>0&&invest>0?invest/monthly:null;return {invest:invest,revenue:revenue,costs:costs,monthly:monthly,annual:annual,roi:roi,payback:payback};
+  }
+  function renderRoi(){
+    var m=roiMetrics();
+    var h='<div class="eyebrow">Financial planning</div><h2>Estimate your ROI</h2><p>Use a cautious monthly estimate. Change the amounts to see how your assumptions affect returns.</p><form id="roi-form"><label class="field">Startup investment (MMK)<input name="investment" type="number" min="1" required value="'+esc(state.roi.investment)+'"></label><label class="field">Expected monthly sales (MMK)<input name="revenue" type="number" min="0" required value="'+esc(state.roi.revenue)+'"></label><label class="field">Monthly operating costs (MMK)<input name="costs" type="number" min="0" required value="'+esc(state.roi.costs)+'"></label><button class="btn primary" type="submit">Calculate estimate</button></form>';
+    h+='<div class="roi-output"><div class="summary"><span>Estimated monthly net profit</span><strong>'+money(m.monthly)+'</strong></div><div class="summary"><span>Estimated net profit in 12 months</span><strong>'+money(m.annual)+'</strong></div><div class="summary"><span>12-month ROI</span><strong>'+(m.roi===null?"Enter your investment":m.roi.toFixed(1)+"%")+'</strong></div><div class="summary"><span>Estimated payback time</span><strong>'+(m.payback===null?"Not reached at these assumptions":m.payback.toFixed(1)+" months")+'</strong></div></div>';
+    h+='<p class="fine-print">ROI = estimated 12-month net profit ÷ startup investment. This estimate excludes tax, financing and changes in sales or costs.</p><div class="action-row">'+button("Save estimate","save-roi","secondary")+button("Back to Profile","back-profile","ghost")+'</div>';return h;
+  }
+  function homeAdMarkup(){
+    var vendor=vendors[homeAdIndex%vendors.length];
+    return '<div class="home-ad-card"><div class="home-ad-copy"><span class="home-ad-label">Sponsored · autoplay</span><strong class="home-ad-title">'+esc(vendor.title)+'</strong><span class="home-ad-text">'+esc(vendor.text)+'</span><div class="home-ad-track"><span id="home-ad-progress" style="width:'+((5-homeAdRemaining)/5*100)+'%"></span></div></div><div class="home-ad-time" id="home-ad-seconds">00:0'+homeAdRemaining+'</div></div>';
+  }
+  function drawHomeAd(){
+    var dock=document.getElementById("home-ad-dock");if(!dock)return;
+    if(state.screen!=="home"||state.premium){dock.hidden=true;if(homeAdTimer){clearInterval(homeAdTimer);homeAdTimer=null;}return;}
+    if(!homeAdTimer)homeAdRemaining=5;
+    dock.hidden=false;dock.innerHTML=homeAdMarkup();
+    if(homeAdTimer)return;
+    homeAdTimer=setInterval(function(){
+      if(state.screen!=="home"||state.premium){clearInterval(homeAdTimer);homeAdTimer=null;dock.hidden=true;return;}
+      homeAdRemaining=Math.max(0,homeAdRemaining-1);
+      var c=document.getElementById("home-ad-seconds");var bar=document.getElementById("home-ad-progress");
+      if(c)c.textContent="00:0"+homeAdRemaining;if(bar)bar.style.width=((5-homeAdRemaining)/5*100)+"%";
+      if(homeAdRemaining<=0){homeAdIndex=(homeAdIndex+1)%vendors.length;homeAdRemaining=5;dock.innerHTML=homeAdMarkup();}
+    },1000);
+  }
+  function render(){
+    if(state.lastRenderedScreen&&state.lastRenderedScreen!==state.screen&&!state.skipHistory){state.screenHistory.push(state.lastRenderedScreen);if(state.screenHistory.length>40)state.screenHistory.shift();}
+    state.skipHistory=false;state.lastRenderedScreen=state.screen;
+    var html="";
+    document.getElementById("app-avatar").textContent=state.screen==="login"?"S":(state.profile.name||"K").slice(0,1).toUpperCase();
+    formatProgress();
+    switch(state.screen){
+      case "login":
+        html='<div class="login-mark" aria-hidden="true">S</div><div class="eyebrow">'+(state.signup?"Create account":"Welcome back")+'</div><h2>'+(state.signup?"Create your account":"Sign in to your workspace")+'</h2><form id="login-form"><label class="field">Email or phone<input name="email" type="text" value="'+(state.signup?"":"demo@startupking.com")+'" placeholder="Enter your email or phone" autocomplete="username" required></label><label class="field">Password<div class="password-control"><input id="password-input" name="password" type="'+(state.passwordVisible?"text":"password")+'" value="'+(state.signup?"":"startupking123")+'" placeholder="Choose a password" autocomplete="current-password" required minlength="8"><button class="password-toggle" type="button" data-act="toggle-password" aria-label="'+(state.passwordVisible?"Hide password":"Show password")+'" title="'+(state.passwordVisible?"Hide password":"Show password")+'"><svg viewBox="0 0 24 24" aria-hidden="true">'+(state.passwordVisible?'<path d="M3 3l18 18M10.6 10.6a2 2 0 002.8 2.8M9.9 5.2A10.8 10.8 0 0112 5c5 0 8.5 4.5 9.5 7-.4 1.1-1.2 2.3-2.2 3.3M6.2 6.2C4.1 7.5 2.8 9.4 2.5 12c.5 1.3 1.5 2.7 3.3 3.9A10.3 10.3 0 0012 19c1.1 0 2.1-.2 3-.5"/>':'<path d="M2.5 12S6 5 12 5s9.5 7 9.5 7-3.5 7-9.5 7-9.5-7-9.5-7z"/><circle cx="12" cy="12" r="3"/>' )+'</svg></button></div></label>'+(state.signup?"":'<p class="note">Demo credentials are prefilled for this prototype.</p>')+'<div class="error" id="login-error" role="alert"></div><button class="btn primary" type="submit">'+(state.signup?"Create account":"Sign in")+'</button></form><button class="btn ghost" style="width:100%;margin-top:9px" type="button" data-act="toggle-signup">'+(state.signup?"Already have an account? Sign in":"Create an account")+'</button>';
+        break;
+      case "onboarding":
+        html='<div class="eyebrow">First, set your direction</div><h2>Personalize your startup path</h2><p>Your level changes the detail and depth of the guidance.</p><form id="onboarding-form"><label class="field">Experience level<select name="level"><option>Beginner</option><option>Standard</option><option>Professional</option></select></label><label class="field">Profession or current experience<input name="profession" value="'+esc(state.profile.profession)+'" required></label><label class="field">Your main goal<select name="goal"><option>Start a new business</option><option>Grow an existing business</option><option>Prepare for funding</option></select></label><label class="field">City or location<input name="location" value="'+esc(state.profile.location)+'" required></label><button class="btn primary" type="submit">Continue to Home</button></form><p class="note">Age is optional. You can update your profile later.</p>';
+        break;
+      case "home":
+        html='<div class="eyebrow">Welcome, '+esc(state.profile.name)+'</div><h2>What would you like to work on?</h2><div class="idea-summary"><strong>Your startup journey</strong><small>'+progressCount()+' of '+stages.length+' stages completed · Guidance level: '+esc(state.profile.level)+'</small><div class="progress"><span style="width:'+Math.round(progressCount()/stages.length*100)+'%"></span></div>'+button("Continue my startup plan","nav-plan","primary")+'</div><div class="stack">'+choice("Find a business idea","Compare three options for your situation.","start-discovery")+choice("AI Help","Get a short answer and a practical next step.","nav-ask")+choice("Browse startup guides","Validation, finance, growth and exit answers.","open-guides")+(state.savedIdea?choice("Saved idea","Return to your saved business idea.","open-saved-idea"):"")+'</div><div class="popular-section"><div class="popular-heading"><div><div class="eyebrow">Explore what others are considering</div><h3>Popular business ideas</h3></div><span class="popular-demo">DEMO DATA</span></div><div class="popular-list"><button class="popular-item" type="button" data-act="popular-idea" data-value="Food & Beverage|Food Shops & Restaurants|Myanmar Restaurant"><span class="popular-rank">01</span><span class="popular-copy"><strong>Myanmar Restaurant</strong><small>Food & Beverage</small></span><span class="popular-interest"><strong>384</strong><small>exploring</small></span><span class="popular-meter"><i style="width:100%"></i></span></button><button class="popular-item" type="button" data-act="popular-idea" data-value="Services|Technology & Digital|Social media management"><span class="popular-rank">02</span><span class="popular-copy"><strong>Social media management</strong><small>Services · Technology & Digital</small></span><span class="popular-interest"><strong>276</strong><small>exploring</small></span><span class="popular-meter"><i style="width:72%"></i></span></button><button class="popular-item" type="button" data-act="popular-idea" data-value="Industry|Retail & Wholesale|Online fashion shop"><span class="popular-rank">03</span><span class="popular-copy"><strong>Online fashion shop</strong><small>Industry · Retail & Wholesale</small></span><span class="popular-interest"><strong>219</strong><small>exploring</small></span><span class="popular-meter"><i style="width:57%"></i></span></button></div><p class="popular-story"><strong>Sample founder story</strong><span>“I tested customer demand in small steps before investing more.”</span></p><button class="btn ghost" style="width:100%" type="button" data-act="start-discovery">Explore all business ideas</button></div>';
+        break;
+      case "discovery":
+        if(!mainBusinessOptions[state.mainBusiness])state.mainBusiness="Food & Beverage";
+        var categoryList=mainBusinessOptions[state.mainBusiness];
+        if(categoryList.indexOf(state.category)<0)state.category=categoryList[0];
+        var typeList=subtypeOptions[state.category]||[];
+        html='<div class="eyebrow">Idea discovery · 1 of 2</div><h2>Choose a business direction</h2><p>Start with one of the three main business areas, then choose a category and business type.</p><form id="discovery-form"><label class="field">Main Business<select name="mainBusiness" id="main-business-select">'+Object.keys(mainBusinessOptions).map(function(c){return '<option '+(state.mainBusiness===c?'selected':'')+'>'+esc(c)+'</option>';}).join('')+'</select></label><label class="field">Subcategory<select name="category" id="category-select">'+categoryList.map(function(c){return '<option '+(state.category===c?'selected':'')+'>'+esc(c)+'</option>';}).join('')+'</select></label><label class="field">Business type (optional)<select name="subtype" id="subtype-select">'+typeList.map(function(t){return '<option '+(state.subtype===t?'selected':'')+'>'+esc(t)+'</option>';}).join('')+'<option '+(state.subtype==="Not sure"?'selected':'')+'>Not sure</option></select></label><button class="btn primary" type="submit">Continue to my situation</button></form>';
+        break;
+      case "assessment":
+        html='<div class="eyebrow">Idea discovery · 2 of 2</div><h2>Tell us about your situation</h2><p>A few short answers help filter and rank suitable ideas.</p><form id="assessment-form"><label class="field">Starting budget (MMK)<select name="budget" required><option value="500000" '+(Number(state.budget)<1000000?'selected':'')+'>Under 1M MMK</option><option value="3000000" '+(Number(state.budget)>=1000000&&Number(state.budget)<5000000?'selected':'')+'>1–5M MMK</option><option value="7500000" '+(Number(state.budget)>=5000000&&Number(state.budget)<10000000?'selected':'')+'>5–10M MMK</option><option value="20000000" '+(Number(state.budget)>=10000000&&Number(state.budget)<30000000?'selected':'')+'>10–30M MMK</option><option value="40000000" '+(Number(state.budget)>=30000000?'selected':'')+'>30M+ MMK</option></select></label><label class="field">Location<select name="location">'+locationOptions.map(function(l){return '<option '+(state.profile.location===l?'selected':'')+'>'+esc(l)+'</option>';}).join('')+'</select></label><label class="field">Time available<select name="availableTime"><option '+(state.availableTime==="Part-time"?"selected":"")+'>Part-time</option><option '+(state.availableTime==="Full-time"?"selected":"")+'>Full-time</option></select></label><label class="field">Skill or experience (optional)<select name="skill"><option value="" '+(!state.skill?'selected':'')+'>No experience</option><option '+(state.skill==="Beginner"?'selected':'')+'>Beginner</option><option '+(state.skill==="Some experience"?'selected':'')+'>Some experience</option><option '+(state.skill==="Experienced"?'selected':'')+'>Experienced</option></select></label><button class="btn primary" type="submit">See my three matches</button></form><p class="note">You can leave skill or experience blank while you explore.</p>';
+        break;
+      case "results":
+        html='<div class="eyebrow">Ranked for your situation</div><h2>Three ideas to compare</h2><p>Estimated fit uses budget, location, skills and available time.</p><div class="callout">'+esc(levelNote())+'</div>'+rankedIdeas().map(function(idea,i){return '<button class="choice result" type="button" data-act="choose-idea" data-value="'+idea.id+'"><span><strong>'+String(i+1).padStart(2,"0")+' · '+esc(idea.title)+'</strong><span class="price">'+esc(idea.cost)+'</span><p>'+esc(idea.fit)+'</p></span><span class="chev">›</span></button>';}).join("")+'<p class="note">Costs are planning ranges. Verify current prices and local requirements before investing.</p><div class="action-row">'+button("Open startup roadmap","nav-plan","secondary")+'</div>';
+        break;
+      case "detail":
+        var idea=ideaById(state.idea);
+        html='<div class="eyebrow">Business idea · '+esc(state.category)+'</div><h2>'+esc(idea.title)+'</h2><div class="idea-summary"><strong>Estimated start-up cost</strong><small>'+esc(idea.cost)+'</small></div><div class="section"><h3>Why it may fit</h3><p>'+esc(idea.fit)+'</p></div><div class="section"><h3>What you may need</h3><div class="chips"><span class="chip">Suitable space</span><span class="chip">Equipment</span><span class="chip">Initial stock</span><span class="chip">Supplier plan</span></div></div><div class="section"><h3>Risk to check</h3><p>'+esc(idea.risk)+'</p></div><div class="callout"><strong>First test:</strong> '+esc(idea.first)+'</div><div class="stack">'+button(state.savedIdea?"Saved to your plan":"Save this idea","save-idea","primary")+button("Open the full startup roadmap","nav-plan","secondary")+button("Ask AI about this idea","nav-ask","ghost")+'</div>';
+        break;
+      case "roadmap":
+        html=renderRoadmap();
+        break;
+      case "stage":
+        html=renderStage();
+        break;
+      case "roi":
+        html=renderRoi();
+        break;
+      case "knowledge":
+        html='<div class="eyebrow">Startup guides</div><h2>Choose a focused answer</h2><p>Each guide gives a concise answer and an action to take next.</p><div class="stack">'+Object.keys(guides).map(function(key){var g=guides[key];return '<button class="choice" type="button" data-act="request-guide" data-value="'+key+'"><span><strong>'+esc(g.title)+'</strong><small>'+esc(g.answer)+'</small></span><span class="chev">›</span></button>';}).join("")+'</div><p class="note">'+"Open a guide to read its short answer and suggested next action."+'</p>';
+        break;
+      case "article":
+        var guide=guides[state.currentGuide]||guides.validation;
+        html='<div class="eyebrow">Startup guide</div><h2>'+esc(guide.title)+'</h2><div class="callout">'+esc(guide.answer)+'</div><div class="idea-summary"><strong>Suggested next action</strong><small>'+esc(guide.next)+'</small></div><div class="stack">'+button("Open related roadmap stage","open-related-stage","primary",guide.stage)+button("Ask a follow-up with AI","nav-ask","secondary")+button("Browse more guides","open-guides","ghost")+'</div>';
+        break;
+      case "assistant":
+        html='<div class="eyebrow">Startup King AI</div><h2>How can I help?</h2><p>Ask one focused question. Replies are brief and point to your next step.</p><div class="quick-asks">'+button("ROI","quick-question","secondary","How do I calculate ROI?")+button("Validate","quick-question","secondary","How do I validate this idea?")+button("Exit","quick-question","secondary","What should I prepare for an exit?")+'</div><div class="chat">';
+        state.assistantHistory.slice(-4).forEach(function(item){html+='<div class="bubble user">'+esc(item.question)+'</div><div class="bubble assistant"><strong>Short answer</strong>'+esc(item.answer)+'<br><br><span class="badge">Next step: '+esc(item.next)+'</span></div>';});
+        html+='</div><form id="assistant-form"><label class="field">Your question<textarea name="question" placeholder="Ask about your idea, finances, growth or exit..." required></textarea></label><button class="btn primary" type="submit">Ask Startup King</button></form><div class="callout">'+(state.premium?"Unlimited answers are included in your subscription.":Math.max(0,2-state.freeLookups)+" free answer lookup"+(2-state.freeLookups===1?"":"s")+" remaining. Each later answer can use one ad or MMK 500.")+'</div><p class="note">AI assistance needs an internet connection. Idea matching uses prepared data.</p>';
+        break;
+      case "answergate":
+        var wait=Math.max(0,Math.ceil((state.adCooldownUntil-Date.now())/1000));
+        var requestName=state.pending&&state.pending.kind==="guide"?(guides[state.pending.id]||guides.validation).title:"your AI answer";
+        html='<div class="gate"><div class="eyebrow">Answer access</div><h2>Unlock this answer</h2><p class="gate-intro"><strong>'+esc(requestName)+'</strong> is ready.</p><div class="gate-benefit"><span class="gate-benefit-icon" aria-hidden="true">✓</span><span>Watch a completed 30-second ad to unlock one answer.</span></div><div class="gate-actions">'+button(wait>0?"Ad available in "+wait+" sec":"Watch a 30-second ad","start-answer-ad","primary",null,wait>0?"disabled id=\"reward-ad-button\"":"id=\"reward-ad-button\"")+(state.adOnly?"":button("Pay MMK 500","pay-answer","secondary")+button("View subscription plans","open-plans","ghost"))+'</div><p id="cooldown-copy" class="gate-note">'+(wait>0?(state.adOnly?"Another ad is available in "+wait+" seconds.":"Another ad is available in "+wait+" seconds, or choose another access option."):"A 60-second cooldown starts after each rewarded ad.")+'</p></div>';
+        break;
+      case "adplayer":
+        html='<div class="eyebrow">Sponsored · '+(state.pendingStageIndex!==null?"stage access":"answer access")+'</div><h2>Sponsored video</h2><div class="video-stage video-stage-player"><button class="video-close" type="button" data-act="close-answer-ad" aria-label="Close sponsored video">×</button><div class="video-stage-content"><button class="video-play-button" type="button" data-act="toggle-ad-play" aria-label="'+(state.adPaused?"Play video":"Pause video")+'" aria-pressed="'+(state.adPaused?"true":"false")+'"><span id="ad-play-icon">'+(state.adPaused?"▶":"Ⅱ")+'</span></button><strong>Startup partner message</strong><small id="ad-play-status">'+(state.adPaused?"Tap play to start":"Playing sponsored video")+'</small></div></div><div class="ad-box"><span class="ad-label">Sponsored</span><div class="ad-count" id="ad-countdown">00:'+String(state.adRemaining).padStart(2,"0")+'</div><p>30 seconds</p><div class="ad-track"><span id="ad-progress" style="width:'+((30-state.adRemaining)/30*100)+'%"></span></div><p id="ad-status">'+(state.pendingStageIndex!==null?"Your stage opens when the video finishes.":"Your answer unlocks when the video finishes.")+'</p></div>';
+        break;
+      case "reward-video":
+        html='<div class="eyebrow">Profile rewards</div><h2>Sponsored video</h2><div class="video-stage video-stage-player"><button class="video-close" type="button" data-act="close-reward-video" aria-label="Close sponsored video">×</button><div class="video-stage-content"><button class="video-play-button" type="button" data-act="toggle-ad-play" aria-label="'+(state.adPaused?"Play video":"Pause video")+'" aria-pressed="'+(state.adPaused?"true":"false")+'"><span id="ad-play-icon">'+(state.adPaused?"▶":"Ⅱ")+'</span></button><strong>Startup partner message</strong><small id="ad-play-status">'+(state.adPaused?"Tap play to start":"Playing sponsored video")+'</small></div></div><div class="ad-box"><span class="ad-label">Sponsored</span><div class="ad-count" id="ad-countdown">00:'+String(state.adRemaining).padStart(2,"0")+'</div><p>30 seconds</p><div class="ad-track"><span id="ad-progress" style="width:'+((30-state.adRemaining)/30*100)+'%"></span></div><p>Question opens when the video finishes.</p></div>';
+        break;
+      case "rewards":
+        var rewardWait=Math.max(0,Math.ceil((state.adCooldownUntil-Date.now())/1000));
+        html='<div class="eyebrow">Profile rewards</div><h2>Watch and earn</h2><p>Watch one short video, then answer a business question.</p><div class="idea-summary"><small>Your reward balance</small><div class="reward-point">'+state.rewardCredits+' <span style="font-size:13px">points</span></div></div>'+(state.rewardMessage?'<div class="callout">'+esc(state.rewardMessage)+'</div>':'')+button(rewardWait>0?"Available in "+rewardWait+" sec":"Watch a 30-sec video","start-reward-video","primary",null,rewardWait>0?'disabled id="reward-video-button"':'id="reward-video-button"')+'<p id="cooldown-copy" class="note">'+(rewardWait>0?"A rewarded video is available in "+rewardWait+" seconds.":"After each completed video, wait one minute before watching another.")+'</p><p class="fine-print">Points are a reward balance. Redemption rules can be set by Startup King.</p>'+button("Back to Profile","back-profile","ghost");
+        break;
+      case "reward-quiz":
+        html='<div class="eyebrow">Profile rewards</div><h2>One quick question</h2><p>What should you check before investing in a new business?</p><form id="reward-quiz-form"><label class="choice quiz-option"><input type="radio" name="answer" value="demand" required><span><strong>Customer demand and startup costs</strong><small>Test the offer and check the numbers first.</small></span></label><label class="choice quiz-option"><input type="radio" name="answer" value="equipment"><span><strong>Buy all equipment first</strong><small>Spend before checking if customers want it.</small></span></label><label class="choice quiz-option"><input type="radio" name="answer" value="branches"><span><strong>Open several branches</strong><small>Scale before proving the first location.</small></span></label><p class="error" role="status">'+esc(state.rewardQuizFeedback)+'</p><button class="btn primary" type="submit">Submit answer</button></form><p class="note">The video cooldown keeps running while you answer.</p>';
+        break;
+      case "appointments":
+        html='<div class="eyebrow">Professional support</div><h2>Appointments</h2><p>Meet with a startup professional.</p>'+(state.appointments.length?'<div class="appointment-list">'+state.appointments.slice().reverse().map(function(a){return '<article class="appointment-card"><div class="appointment-card-head"><h3>'+esc(a.specialty)+'</h3><span class="appointment-status">Pending</span></div><p class="appointment-meta">'+esc(a.date)+' · '+esc(a.time)+' · '+esc(a.format)+'</p><p class="appointment-topic">'+esc(a.topic)+'</p><small class="appointment-hint">We’ll confirm availability and any fee before booking.</small></article>';}).join('')+'</div>':'<div class="appointment-empty"><span class="appointment-empty-icon" aria-hidden="true">▦</span><h3>No appointments yet</h3><p>Choose a topic and preferred time to request professional support.</p></div>')+'<div class="appointment-actions">'+button("Request an appointment","new-appointment","primary")+'</div>';
+        break;
+      case "appointment-form":
+        html='<div class="eyebrow">Professional support</div><h2>Request an appointment</h2><p>Choose a preferred time. The professional confirms availability and any fee.</p><form id="appointment-form"><label class="field">Professional area<select name="specialty"><option>Business planning</option><option>Finance and ROI</option><option>Marketing and sales</option><option>Legal and setup</option><option>Operations and growth</option></select></label><label class="field">Preferred date<input name="date" type="date" required></label><label class="field">Preferred time<input name="time" type="time" required></label><label class="field">Meeting format<select name="format"><option>Online</option><option>In person</option></select></label><label class="field">What would you like help with?<textarea name="topic" placeholder="Briefly describe your question" required></textarea></label><button class="btn primary" type="submit">Send appointment request</button></form>';
+        break;
+      case "appointment-confirmed":
+        var sent=state.lastAppointment||{};
+        html='<div class="appointment-success-icon" aria-hidden="true">✓</div><div class="eyebrow">Request received</div><h2>Appointment request sent</h2><p>Your request is saved as pending confirmation.</p><article class="appointment-card appointment-confirmation"><div class="appointment-card-head"><h3>'+esc(sent.specialty||"Business planning")+'</h3><span class="appointment-status">Pending</span></div><p class="appointment-meta">'+esc(sent.date||"")+' · '+esc(sent.time||"")+' · '+esc(sent.format||"Online")+'</p><p class="appointment-topic">'+esc(sent.topic||"")+'</p></article><p class="note">The professional will confirm availability and any fee before the booking is finalized.</p><div class="appointment-actions">'+button("View my appointments","open-appointments","primary")+button("Return to Home","nav-home","ghost")+'</div>';
+        break;
+      case "plans":
+        var monthlyCurrent=state.premium&&state.plan==="monthly";
+        var annualCurrent=state.premium&&state.plan==="yearly";
+        html='<div class="eyebrow">Startup King subscription</div><h2>Choose your access plan</h2><p class="plans-intro">Unlimited answers, AI help, and no ad interruptions.</p><div class="plan-card plan-recommended"><div class="plan-heading"><span class="plan-name">Annual</span><span class="plan-badge">BEST VALUE</span></div><div class="plan-price">MMK 500,000 <small>/ year</small></div><p class="plan-detail">About MMK 41,667 per month · Save MMK 100,000</p><ul class="checklist"><li>Unlimited answer lookups</li><li>AI follow-up assistance</li><li>No answer ads or autoplay vendor placements</li></ul>'+button(annualCurrent?"Current plan":"Choose annual plan","choose-plan",annualCurrent?"secondary":"primary","yearly",annualCurrent?'disabled aria-pressed="true"':'')+'</div><div class="plan-card"><div class="plan-heading"><span class="plan-name">Monthly</span>'+(monthlyCurrent?'<span class="plan-current">CURRENT PLAN</span>':'')+'</div><div class="plan-price">MMK 50,000 <small>/ month</small></div><p class="plan-detail">Billed monthly, with no annual commitment.</p><ul class="checklist"><li>Unlimited answer lookups</li><li>AI follow-up assistance</li><li>No answer ads or autoplay vendor placements</li></ul>'+button(monthlyCurrent?"Current plan":"Choose monthly plan","choose-plan",monthlyCurrent?"secondary":"ghost","monthly",monthlyCurrent?'disabled aria-pressed="true"':'')+'</div><p class="fine-print">Choose a plan to review payment details before confirming.</p>';
+        break;
+      case "payment":
+        var payTitle=state.payment.kind==="answer"?"One answer unlock":state.payment.plan==="yearly"?"One-year subscription":"One-month subscription";
+        html='<div class="eyebrow">Checkout</div><h2>Review your payment</h2><div class="idea-summary"><strong>'+payTitle+'</strong><small>'+money(state.payment.amount)+'</small></div><form id="payment-form"><label class="field">Payment method<select name="method"><option>Mobile payment</option><option>Bank card</option><option>Bank transfer</option></select></label><label class="field">Payer phone or reference<input name="reference" placeholder="Enter payment reference" required></label><button class="btn primary" type="submit">Confirm payment</button></form><button class="btn ghost" style="width:100%;margin-top:8px" type="button" data-act="cancel-payment">Back</button>';
+        break;
+      case "partners":
+        html='<div class="eyebrow">Sponsored vendors</div><h2>Local business partners</h2><p>Vendor spots autoplay for five seconds at the bottom of Home. These partner details are optional.</p><div class="stack">'+vendors.map(function(v){return '<div class="result"><span class="badge">Sponsored vendor</span><h3 style="margin-top:8px">'+esc(v.title)+'</h3><p>'+esc(v.text)+'</p>'+button("View partner details","open-vendor","secondary",v.id)+'</div>';}).join("")+'</div><p class="note">Partner promotions are separate from the 30-second rewarded ad for answer access.</p>';
+        break;
+      case "vendorad":
+        var vendor=vendors.filter(function(v){return v.id===state.currentVendor;})[0]||vendors[0];
+        html='<div class="eyebrow">Sponsored vendor · '+esc(vendor.title)+'</div><h2>Partner introduction</h2><div class="ad-box"><span class="ad-label">Sponsored placement</span><div class="ad-count" id="vendor-countdown">00:0'+state.vendorRemaining+'</div><p>Vendor introduction · 5 seconds</p><div class="ad-track"><span id="vendor-progress" style="width:'+((5-state.vendorRemaining)/5*100)+'%"></span></div><p id="vendor-status">'+esc(vendor.text)+'</p></div><p class="note">The partner profile opens when the five-second introduction finishes.</p><button class="btn ghost" type="button" data-act="close-vendor-ad">Close introduction</button>';
+        break;
+      case "vendor":
+        var partner=vendors.filter(function(v){return v.id===state.currentVendor;})[0]||vendors[0];
+        html='<div class="eyebrow">Sponsored vendor profile</div><h2>'+esc(partner.title)+'</h2><div class="idea-summary"><strong>How this partner may help</strong><small>'+esc(partner.text)+'</small></div><div class="callout">Review the offer, compare it with other providers and confirm prices directly before purchasing.</div><div class="stack">'+button("View another partner","open-partners","secondary")+button("Return to my plan","nav-plan","ghost")+'</div>';
+        break;
+      case "profile":
+        html='<div class="eyebrow">Your account and tools</div><h2>'+esc(state.profile.name)+'</h2><div class="summary"><span>Email or phone</span><strong>'+esc(state.profile.email||"Account profile")+'</strong></div><div class="summary"><span>Experience level</span><strong>'+esc(state.profile.level)+'</strong></div><div class="summary"><span>Startup goal</span><strong>'+esc(state.profile.goal)+'</strong></div><div class="summary"><span>Access plan</span><strong>'+esc(state.premium?(state.plan==="yearly"?"Annual":"Monthly"):"Free access")+'</strong></div><div class="section"><h3>Founder tools</h3><div class="stack">'+choice("ROI calculator",state.roiSaved?"Saved estimate · edit assumptions":"Calculate profit, 12-month return and payback","open-roi")+choice("Rewards · "+state.rewardCredits+" points","Watch a video and answer a business question","open-rewards")+choice("Professional appointments",state.appointments.length?state.appointments.length+" request(s) · view status":"Request a session with a professional","open-appointments")+'</div></div><div class="stack" style="margin-top:16px">'+button(state.premium?"Manage subscription":"View subscription plans","open-plans","secondary")+button("Edit founder profile","edit-profile","ghost")+button("Sign out","logout","ghost")+'</div>';
+        break;
+      case "payment-success":
+        html='<div class="login-mark" aria-hidden="true">✓</div><div class="eyebrow">Payment confirmed</div><h2>Your access is ready</h2><p>The requested answer or subscription is now available.</p>'+button("Continue","complete-payment","primary");
+        break;
+    }
+    var backMarkup=state.screen!=="login"&&state.screenHistory.length?'<button class="screen-back" type="button" data-act="go-back" aria-label="Back to previous page" title="Back"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 12H5M12 19l-7-7 7-7"/></svg><span class="sr-only">Back</span></button>':"";
+    app.innerHTML=backMarkup+html+'<div class="toast" id="toast" role="status"></div>';
+    drawNav();
+    setExplanation();
+    drawHomeAd();
+    app.scrollTop=0;
+  }
+  function generateAnswer(q){
+    var s=String(q||"").toLowerCase();
+    if(s.indexOf("roi")>=0||s.indexOf("return")>=0||s.indexOf("profit")>=0)return {answer:"Estimate monthly sales minus operating costs. Divide 12 months of net profit by your startup investment for a first-year ROI, then check how many months it takes to recover the investment.",next:"ROI calculator",stage:"finance"};
+    if(s.indexOf("exit")>=0||s.indexOf("sell")>=0||s.indexOf("succession")>=0)return {answer:"Compare a business sale, acquisition, founder buyout, succession, merger or closure. Keep clean accounts and ownership records, then set a readiness timeline.",next:"Exit strategy",stage:"exit"};
+    if(s.indexOf("valid")>=0||s.indexOf("demand")>=0||s.indexOf("customer")>=0)return {answer:"Talk with likely customers, test a small offer, and compare real interest with nearby alternatives before investing more.",next:"Validation checklist",stage:"validation"};
+    if(s.indexOf("growth")>=0||s.indexOf("scale")>=0||s.indexOf("hire")>=0)return {answer:"Expand after repeat demand, positive unit margins and reliable operations are clear. Set a sales or capacity milestone before hiring or adding a location.",next:"Growth plan",stage:"growth"};
+    return {answer:"Test customer demand first, then check costs, setup and daily operations. Follow the roadmap through validation, business planning, launch, finance, growth and risk review, then prepare your exit strategy.",next:"Open your startup roadmap",stage:"validation"};
+  }
+  function showAnswer(question,kind,id){
+    state.adOnly=false;
+    if(kind==="guide"){state.currentGuide=id;state.screen="article";render();return;}
+    var res=generateAnswer(question);state.assistantHistory.push({question:question,answer:res.answer,next:res.next,stage:res.stage});state.screen="assistant";render();
+  }
+  function requestLookup(kind,payload){
+    if(state.premium){showAnswer(payload.question||"",kind,payload.id);return;}
+    if(!state.adOnly&&state.freeLookups<2){state.freeLookups++;showAnswer(payload.question||"",kind,payload.id);return;}
+    state.pending={kind:kind,id:payload.id||"",question:payload.question||""};state.screen="answergate";render();startCooldownTicker();
+  }
+  function openStageWithAd(index){if(state.premium||index===0){state.stageIndex=index;state.screen="stage";render();return;}state.pendingStageIndex=index;beginRewardAd("stage");}
+  function beginRewardAd(mode){
+    var stageAd=mode==="stage";
+    if(!stageAd&&Date.now()<state.adCooldownUntil)return;
+    clearInterval(adTimer);state.rewardMode=mode==="rewards";state.adPaused=false;state.adRemaining=30;state.screen=state.rewardMode?"reward-video":"adplayer";render();
+    adTimer=setInterval(function(){
+      if(state.adPaused)return;
+      state.adRemaining=Math.max(0,state.adRemaining-1);
+      var c=document.getElementById("ad-countdown");var p=document.getElementById("ad-progress");
+      if(c)c.textContent="00:"+String(state.adRemaining).padStart(2,"0");if(p)p.style.width=((30-state.adRemaining)/30*100)+"%";
+      if(state.adRemaining<=0){
+        clearInterval(adTimer);adTimer=null;state.skipHistory=true;
+        if(state.rewardMode){state.adCooldownUntil=Date.now()+60000;state.rewardMode=false;state.rewardQuizFeedback="";state.screen="reward-quiz";render();}
+        else if(stageAd&&state.pendingStageIndex!==null){state.stageIndex=state.pendingStageIndex;state.pendingStageIndex=null;state.screen="stage";render();}
+        else{state.adCooldownUntil=Date.now()+60000;state.freeLookups++;var pending=state.pending||{question:"",kind:"ai",id:""};state.pending=null;showAnswer(pending.question,pending.kind,pending.id);}
+      }
+    },1000);
+  }
+  function startCooldownTicker(){
+    clearInterval(cooldownTimer);cooldownTimer=setInterval(function(){
+      if(state.screen!=="answergate"&&state.screen!=="rewards"){clearInterval(cooldownTimer);cooldownTimer=null;return;}
+      var wait=Math.max(0,Math.ceil((state.adCooldownUntil-Date.now())/1000));
+      var answerButton=document.getElementById("reward-ad-button");var rewardButton=document.getElementById("reward-video-button");var copy=document.getElementById("cooldown-copy");
+      if(answerButton){answerButton.disabled=wait>0;answerButton.textContent=wait>0?"Watch ad in "+wait+" sec":"Watch a 30-sec ad";}
+      if(rewardButton){rewardButton.disabled=wait>0;rewardButton.textContent=wait>0?"Available in "+wait+" sec":"Watch a 30-sec video";}
+      if(copy){if(state.screen==="rewards")copy.textContent=wait>0?"A rewarded video is available in "+wait+" seconds.":"After each completed video, wait one minute before watching another.";else copy.textContent=wait>0?"Another rewarded ad is available in "+wait+" seconds. You can pay MMK 500 now.":"A 60-second cooldown starts after each rewarded ad.";}
+      if(wait===0){clearInterval(cooldownTimer);cooldownTimer=null;}
+    },1000);
+  }
+  function beginVendorAd(id){
+    clearInterval(vendorTimer);state.currentVendor=id;state.vendorRemaining=5;state.screen="vendorad";render();
+    vendorTimer=setInterval(function(){
+      state.vendorRemaining=Math.max(0,state.vendorRemaining-1);
+      var c=document.getElementById("vendor-countdown");var p=document.getElementById("vendor-progress");
+      if(c)c.textContent="00:0"+state.vendorRemaining;if(p)p.style.width=((5-state.vendorRemaining)/5*100)+"%";
+      if(state.vendorRemaining<=0){clearInterval(vendorTimer);vendorTimer=null;state.screen="vendor";render();}
+    },1000);
+  }
+  function clearTimers(){clearInterval(adTimer);clearInterval(vendorTimer);clearInterval(cooldownTimer);clearInterval(homeAdTimer);adTimer=null;vendorTimer=null;cooldownTimer=null;homeAdTimer=null;}
+  function completePayment(){
+    if(state.payment.kind==="subscription"){state.premium=true;state.plan=state.payment.plan;}
+    if(state.payment.kind==="answer"){state.freeLookups++;}
+    state.payment={kind:"",plan:"",amount:0};
+    if(state.pending){var p=state.pending;state.pending=null;showAnswer(p.question,p.kind,p.id);}
+    else{state.screen="profile";render();}
+  }
+  app.addEventListener("change",function(event){
+    if(event.target&&event.target.name==="mainBusiness"){
+      state.mainBusiness=event.target.value;var categories=mainBusinessOptions[state.mainBusiness]||[];var category=document.getElementById("category-select");var types=document.getElementById("subtype-select");
+      state.category=categories[0]||"";state.subtype=(subtypeOptions[state.category]||[])[0]||"";
+      if(category)category.innerHTML=categories.map(function(c){return '<option>'+esc(c)+'</option>';}).join("");
+      if(types)types.innerHTML=(subtypeOptions[state.category]||[]).map(function(t){return '<option>'+esc(t)+'</option>';}).join("");
+    }else if(event.target&&event.target.name==="category"){
+      state.category=event.target.value;var sub=document.getElementById("subtype-select");var options=subtypeOptions[state.category]||[];state.subtype=options[0]||"";
+      if(sub)sub.innerHTML=options.map(function(t){return '<option>'+esc(t)+'</option>';}).join("");
+    }
+  });
+  app.addEventListener("submit",function(event){
+    event.preventDefault();
+    var form=event.target;var fd=new FormData(form);
+    if(form.id==="login-form"){state.profile.email=String(fd.get("email")||"").trim();state.screenHistory=[];state.skipHistory=true;state.screen="home";render();}
+    else if(form.id==="onboarding-form"){state.profile.level=String(fd.get("level")||"Beginner");state.profile.profession=String(fd.get("profession")||"");state.profile.goal=String(fd.get("goal")||"Start a new business");state.profile.location=String(fd.get("location")||"Yangon");markDone("profile");state.screen="home";render();}
+    else if(form.id==="discovery-form"){state.mainBusiness=String(fd.get("mainBusiness")||"Food & Beverage");state.category=String(fd.get("category")||"Food Shops & Restaurants");state.subtype=String(fd.get("subtype")||"Not sure");state.screen="assessment";render();}
+    else if(form.id==="assessment-form"){state.budget=String(fd.get("budget")||"");state.profile.location=String(fd.get("location")||state.profile.location);state.availableTime=String(fd.get("availableTime")||"Full-time");state.skill=String(fd.get("skill")||"");markDone("discovery");state.screen="results";render();}
+    else if(form.id==="roi-form"){state.roi.investment=String(fd.get("investment")||"");state.roi.revenue=String(fd.get("revenue")||"");state.roi.costs=String(fd.get("costs")||"");state.roiCalculated=true;render();}
+    else if(form.id==="reward-quiz-form"){if(String(fd.get("answer")||"")==="demand"){state.rewardCredits++;state.rewardMessage="Correct. One reward point has been added to your balance.";state.rewardQuizFeedback="";state.screen="rewards";render();startCooldownTicker();}else{state.rewardQuizFeedback="Try again: think about what to confirm before spending.";render();}}
+    else if(form.id==="appointment-form"){var request={specialty:String(fd.get("specialty")||"Business planning"),date:String(fd.get("date")||""),time:String(fd.get("time")||""),format:String(fd.get("format")||"Online"),topic:String(fd.get("topic")||"")};state.appointments.push(request);state.lastAppointment=request;state.screen="appointment-confirmed";render();}
+    else if(form.id==="assistant-form"){var question=String(fd.get("question")||"").trim();if(question)requestLookup("ai",{question:question});}
+    else if(form.id==="payment-form"){state.screen="payment-success";render();}
+  });
+  document.addEventListener("click",function(event){
+    var el=event.target.closest("[data-act]");if(!el)return;var act=el.dataset.act;var value=el.dataset.value;
+    if(act==="go-back"){var previous=state.screenHistory.pop();if(!previous)return;if(state.screen==="adplayer"||state.screen==="reward-video"){clearInterval(adTimer);adTimer=null;state.rewardMode=false;state.adPaused=false;state.pendingStageIndex=null;}if(state.screen==="vendorad"){clearInterval(vendorTimer);vendorTimer=null;}state.screen=previous;state.skipHistory=true;render();}
+    else if(act==="restart"){clearTimers();state=freshState();render();}
+    else if(act==="create-account"){state.signup=true;render();}
+    else if(act==="toggle-signup"){state.signup=!state.signup;state.passwordVisible=false;render();}
+    else if(act==="toggle-password"){state.passwordVisible=!state.passwordVisible;var passwordInput=document.getElementById("password-input");var passwordToggle=event.target.closest(".password-toggle");if(passwordInput)passwordInput.type=state.passwordVisible?"text":"password";if(passwordToggle){var label=state.passwordVisible?"Hide password":"Show password";passwordToggle.setAttribute("aria-label",label);passwordToggle.title=label;passwordToggle.innerHTML=state.passwordVisible?'<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 3l18 18M10.6 10.6a2 2 0 002.8 2.8M9.9 5.2A10.8 10.8 0 0112 5c5 0 8.5 4.5 9.5 7-.4 1.1-1.2 2.3-2.2 3.3M6.2 6.2C4.1 7.5 2.8 9.4 2.5 12c.5 1.3 1.5 2.7 3.3 3.9A10.3 10.3 0 0012 19c1.1 0 2.1-.2 3-.5"/></svg>':'<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2.5 12S6 5 12 5s9.5 7 9.5 7-3.5 7-9.5 7-9.5-7-9.5-7z"/><circle cx="12" cy="12" r="3"/></svg>';}}
+    else if(act==="start-discovery"){state.screen="discovery";render();}
+    else if(act==="popular-idea"){var selected=value.split("|");state.mainBusiness=selected[0];state.category=selected[1];state.subtype=selected[2];state.screen="discovery";render();}
+    else if(act==="choose-idea"){state.idea=value;var chosenIdea=ideaById(value);state.savedIdea=true;state.savedIdeaName=chosenIdea.title;markDone("discovery");state.screen="roadmap";render();}
+    else if(act==="save-idea"){var chosenIdea=ideaById(state.idea);state.savedIdea=true;state.savedIdeaName=chosenIdea.title;markDone("discovery");render();}
+    else if(act==="open-saved-idea"){state.screen="roadmap";render();}
+    else if(act==="nav-home"){state.screen="home";render();}
+    else if(act==="nav-plan"||act==="open-roadmap"){state.screen="roadmap";render();}
+    else if(act==="nav-ask"){state.screen="assistant";render();}
+    else if(act==="nav-profile"){state.screen="profile";render();}
+    else if(act==="open-guides"){state.screen="knowledge";render();}
+    else if(act==="request-guide"){requestLookup("guide",{id:value});}
+    else if(act==="quick-question"){requestLookup("ai",{question:value});}
+    else if(act==="open-related-stage"){state.stageIndex=stageByKey(value);state.screen="stage";render();}
+    else if(act==="open-roi"){state.screen="roi";render();}
+    else if(act==="save-roi"){state.roiSaved=true;state.screen="profile";render();showToast("ROI estimate saved.");}
+    else if(act==="back-stage"){state.screen="stage";render();}
+    else if(act==="back-profile"){state.screen="profile";render();}
+    else if(act==="open-rewards"){state.rewardMessage="";state.screen="rewards";render();if(Date.now()<state.adCooldownUntil)startCooldownTicker();}
+    else if(act==="start-reward-video"){beginRewardAd("rewards");}
+    else if(act==="close-reward-video"){clearInterval(adTimer);adTimer=null;state.rewardMode=false;state.skipHistory=true;state.screen="rewards";render();}
+    else if(act==="open-appointments"){state.screen="appointments";render();}
+    else if(act==="new-appointment"){state.screen="appointment-form";render();}
+    else if(act==="open-vendor"){state.currentVendor=value;state.screen="vendor";render();}
+    else if(act==="complete-stage"){markDone(value);render();showToast("Stage added to your progress.");}
+    else if(act==="next-stage"){markDone(stages[state.stageIndex].key);openStageWithAd(Math.min(stages.length-1,state.stageIndex+1));}
+    else if(act==="prev-stage"){openStageWithAd(Math.max(0,state.stageIndex-1));}
+    else if(act==="finish-journey"){markDone("exit");state.screen="roadmap";render();showToast("Exit strategy added to your plan.");}
+    else if(act==="open-stage"){openStageWithAd(stageByKey(value));}
+    else if(act==="open-partners"){state.screen="partners";render();}
+    else if(act==="play-vendor-ad"){beginVendorAd(value);}
+    else if(act==="close-vendor-ad"){clearInterval(vendorTimer);vendorTimer=null;state.skipHistory=true;state.screen="partners";render();}
+    else if(act==="toggle-ad-play"){state.adPaused=!state.adPaused;var playIcon=document.getElementById("ad-play-icon");var playButton=event.target.closest(".video-play-button");var playStatus=document.getElementById("ad-play-status");if(playIcon)playIcon.textContent=state.adPaused?"▶":"Ⅱ";if(playButton){playButton.setAttribute("aria-label",state.adPaused?"Resume video":"Pause video");playButton.setAttribute("aria-pressed",state.adPaused?"true":"false");}if(playStatus)playStatus.textContent=state.adPaused?"Video paused":"Playing sponsored video";}
+    else if(act==="close-answer-ad"){clearInterval(adTimer);adTimer=null;state.skipHistory=true;if(state.pendingStageIndex!==null){state.pendingStageIndex=null;state.screen="roadmap";render();}else{state.screen="answergate";render();startCooldownTicker();}}
+    else if(act==="start-answer-ad"){beginRewardAd("answer");}
+    else if(act==="pay-answer"){state.payment={kind:"answer",plan:"",amount:500};state.screen="payment";render();}
+    else if(act==="open-plans"){state.screen="plans";render();}
+    else if(act==="choose-plan"){state.payment={kind:"subscription",plan:value,amount:value==="yearly"?500000:50000};state.screen="payment";render();}
+    else if(act==="cancel-payment"){state.screen=state.pending?"answergate":"plans";render();if(state.screen==="answergate")startCooldownTicker();}
+    else if(act==="complete-payment"){completePayment();}
+    else if(act==="back-plans"){state.screen=state.pending?"answergate":"profile";render();if(state.screen==="answergate")startCooldownTicker();}
+    else if(act==="edit-profile"){state.screen="onboarding";render();}
+    else if(act==="logout"){clearTimers();state=freshState();render();}
+    else if(act==="ask-stage"){state.adOnly=true;requestLookup("ai",{question:"How can I work on "+value+"?"});}
+  });
+  render();
+})();
+</script>
+</body>
+</html>
