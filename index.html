@@ -336,6 +336,11 @@
     else h+=button("Finish exit plan","finish-journey","primary");
     h+='</div><div class="stage-all">'+button("View all stages","nav-plan","ghost")+'</div>';return h;
   }
+  function renderIdeaMatches(){
+    var resultBudgetLabels={"500000":"Under 1M MMK","3000000":"1–5M MMK","7500000":"5–10M MMK","20000000":"10–30M MMK","40000000":"30M+ MMK"};
+    var resultExperience=state.skill||"No experience";
+    return '<div class="ai-message"><span class="ai-avatar" aria-hidden="true">S</span><div class="ai-bubble">I’ve compared three ideas using your answers. Here are some options that may fit.</div></div><div class="ai-message ai-user-message"><div class="ai-user-bubble">'+esc(state.subtype)+' · '+esc(resultBudgetLabels[String(state.budget)]||'Your budget')+' · '+esc(state.profile.location)+' · '+esc(state.availableTime)+' · '+esc(resultExperience)+'</div></div><div class="ai-message"><span class="ai-avatar" aria-hidden="true">S</span><div class="ai-bubble">Which one would you like to explore?</div></div><div class="results-replies">'+rankedIdeas().map(function(idea,i){return '<button class="choice result" type="button" data-act="choose-idea" data-value="'+idea.id+'"><span class="result-rank">'+String(i+1).padStart(2,"0")+'</span><span class="result-copy"><strong>'+esc(idea.title)+'</strong><span class="price">'+esc(idea.cost)+'</span><small>'+esc(idea.fit)+'</small></span><span class="chev">›</span></button>';}).join("")+'</div><div class="ai-message"><span class="ai-avatar" aria-hidden="true">S</span><div class="ai-bubble results-note">These are planning estimates. Check local prices and requirements before investing.</div></div>';
+  }
   function roiMetrics(){
     var invest=Number(state.roi.investment)||0;var revenue=Number(state.roi.revenue)||0;var costs=Number(state.roi.costs)||0;var monthly=revenue-costs;var annual=monthly*12;var roi=invest>0?(annual/invest)*100:null;var payback=monthly>0&&invest>0?invest/monthly:null;return {invest:invest,revenue:revenue,costs:costs,monthly:monthly,annual:annual,roi:roi,payback:payback};
   }
@@ -409,13 +414,12 @@
         else if(state.assessmentStep===2){chat+='<div class="ai-quick-choices chat-options">'+locationOptions.map(function(location){return answerButton('location',location,location);}).join('')+'</div>';}
         else if(state.assessmentStep===3){chat+='<div class="ai-quick-choices chat-options">'+['Part-time','Full-time'].map(function(time){return answerButton('time',time,time);}).join('')+'</div>';}
         else if(state.assessmentStep===4){chat+='<div class="ai-quick-choices chat-options">'+skillAnswers.map(function(skill){return answerButton('skill',skill.value,skill.label);}).join('')+'</div>';}
-        else if(state.assessmentStep>=5){chat+=askBubble('Thanks. I’ve got what I need. I’ll compare three business ideas for you.');chat+='<button class="btn primary chat-submit" type="button" data-act="show-matches">Show my three ideas</button>';}
+        else if(state.assessmentStep===5){chat+=askBubble('Thanks. I’ve got what I need. I’ll compare three business ideas for you.');chat+='<button class="btn primary chat-submit" type="button" data-act="show-matches">Show my three ideas</button>'; }
+        else if(state.assessmentStep>=6){chat+=renderIdeaMatches();if(state.assessmentStep>=7){var selectedMatch=ideaById(state.idea);chat+=replyBubble(state.savedIdeaName||selectedMatch.title);chat+=askBubble('<strong>Good choice.</strong> '+esc(selectedMatch.title)+' may be started for '+esc(selectedMatch.cost)+'. Your first test: '+esc(selectedMatch.first)+' Current estimate: '+esc(selectedMatch.fit));chat+='<button class="btn primary chat-submit" type="button" data-act="nav-plan">Open my startup roadmap</button>';}}
         chat+='</div>';html=chat;
         break;
       case "results":
-        var resultBudgetLabels={"500000":"Under 1M MMK","3000000":"1–5M MMK","7500000":"5–10M MMK","20000000":"10–30M MMK","40000000":"30M+ MMK"};
-        var resultExperience=state.skill||"No experience";
-        html='<div class="eyebrow">Startup King AI · Your matches</div><h2>Three ideas to compare</h2><div class="ai-conversation results-conversation" role="log" aria-live="polite"><div class="ai-message"><span class="ai-avatar" aria-hidden="true">S</span><div class="ai-bubble">I’ve compared the options using your answers. Here are three ideas that may fit.</div></div><div class="ai-message ai-user-message"><div class="ai-user-bubble">'+esc(resultBudgetLabels[String(state.budget)]||'Your budget')+' · '+esc(state.profile.location)+' · '+esc(state.availableTime)+' · '+esc(resultExperience)+'</div></div><div class="ai-message"><span class="ai-avatar" aria-hidden="true">S</span><div class="ai-bubble">Which one would you like to explore?</div></div><div class="results-replies">'+rankedIdeas().map(function(idea,i){return '<button class="choice result" type="button" data-act="choose-idea" data-value="'+idea.id+'"><span class="result-rank">'+String(i+1).padStart(2,"0")+'</span><span class="result-copy"><strong>'+esc(idea.title)+'</strong><span class="price">'+esc(idea.cost)+'</span><small>'+esc(idea.fit)+'</small></span><span class="chev">›</span></button>';}).join("")+'</div><div class="ai-message"><span class="ai-avatar" aria-hidden="true">S</span><div class="ai-bubble results-note">These are starting estimates. Check local prices and requirements before investing.</div></div><div class="results-roadmap">'+button("Open my startup roadmap","nav-plan","secondary")+'</div></div>';
+        html='<div class="eyebrow">Startup King AI · Your matches</div><h2>Three ideas to compare</h2><div class="ai-conversation results-conversation" role="log" aria-live="polite">'+renderIdeaMatches()+'<div class="results-roadmap">'+button("Open my startup roadmap","nav-plan","secondary")+'</div></div>';
         break;
       case "detail":
         var idea=ideaById(state.idea);
@@ -604,9 +608,9 @@
     else if(act==="choose-business-type"){state.subtype=value;state.discoveryStep=4;state.assessmentStep=1;state.screen="assessment";render();}
     else if(act==="continue-discovery"){state.screen="assessment";render();}
     else if(act==="assessment-answer"){var answerSplit=value.indexOf("|");var answerKey=value.slice(0,answerSplit);var answerValue=value.slice(answerSplit+1);if(answerKey==="budget")state.budget=answerValue;else if(answerKey==="location")state.profile.location=answerValue;else if(answerKey==="time")state.availableTime=answerValue;else if(answerKey==="skill")state.skill=answerValue;state.assessmentStep=Math.min(5,state.assessmentStep+1);render();}
-    else if(act==="show-matches"){markDone("discovery");state.screen="results";render();}
+    else if(act==="show-matches"){markDone("discovery");state.assessmentStep=6;render();}
     else if(act==="popular-idea"){var selected=value.split("|");state.mainBusiness=selected[0];state.category=selected[1];state.subtype=selected[2];state.discoveryStep=4;state.assessmentStep=1;state.screen="assessment";render();}
-    else if(act==="choose-idea"){state.idea=value;var chosenIdea=ideaById(value);state.savedIdea=true;state.savedIdeaName=chosenIdea.title;markDone("discovery");state.screen="roadmap";render();}
+    else if(act==="choose-idea"){state.idea=value;var chosenIdea=ideaById(value);state.savedIdea=true;state.savedIdeaName=chosenIdea.title;state.assessmentStep=7;markDone("discovery");state.screen="assessment";render();}
     else if(act==="save-idea"){var chosenIdea=ideaById(state.idea);state.savedIdea=true;state.savedIdeaName=chosenIdea.title;markDone("discovery");render();}
     else if(act==="open-saved-idea"){state.screen="roadmap";render();}
     else if(act==="nav-home"){state.screen="home";render();}
